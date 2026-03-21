@@ -25,40 +25,246 @@
         <div class="header__navbar-second">
             <h2 class="header__title-second">Give All You Need</h2>
             <div class="header__search">
-                <input class="header__search-txt" type="text" placeholder="Search on Stuffsus">
-                <button class="header__search-button">Search</button>
+                <!-- <img src="img/search.svg" class="header__search-img"> -->
+                <input class="header__search-input" type="text" placeholder="Search on Stuffsus">
+                <button type="submit" class="header__search-button">Search</button>
             </div>
         </div>
     </header>
     <main class="shop">
         <div class="shop__box">
-            <div class="shop__category">
-                <div class="shop__category-title-box">
-                    <img src="img/category.svg" class="shop__category-title-img">
-                    <h2 class="shop__category-title">Category</h2>
-                </div>
-                <div class="shop__category-container">
-                    <ul class="shop__category-list">
-                        <li class="shop__category-item"><img src="img/house.svg" class="shop__category-item-img"><a href="">For Home</a></li>
-                        <li class="shop__category-item"><a href="">For Music</a></li>
-                        <li class="shop__category-item"><a href="">For Phone</a></li>
-                        <li class="shop__category-item"><a href="">For Segurity</a></li>
+            <div class="shop__tree-menu">
+                <h2 class="shop__tree-menu-title">Category</h2>
+                <details open class="shop__details">
+                    <summary class="shop__summary shop__summary--active">
+                        <div class="shop__summary-content">
+                            <i><img src="img/bag.svg" class="shop__tree-menu-category-img"></i>
+                            All Products
+                        </div>
+                    </summary>
+                    <ul class="shop__sub-menu">
+                        <li class="shop__tree-menu-category-item">
+                            <i></i><img src="img/house.svg" class="shop__category-item-img"></i>
+                            <a href="">For Home</a>
+                        </li>
+                        <li class="shop__tree-menu-category-item">
+                            <i></i><img src="img/phone.svg" class="shop__category-item-img"></i>
+                            <a href="">For Phone</a>
+                        </li>
+                        <li class="shop__tree-menu-category-item">
+                            <i></i><img src="img/music.svg" class="shop__category-item-img"></i>
+                            <a href="">For Music</a>
+                        </li>
+                        <li class="shop__tree-menu-category-item">
+                            <i></i><img src="img/unlock.svg" class="shop__category-item-img"></i>
+                            <a href="">For Segurity</a>
+                        </li>
                     </ul>
-                </div>
+                </details>
+                <details class="shop__details">
+                    <summary class="shop__summary shop__summary--active">
+                        <div class="shop__summary-content">
+                            <i><img src="img/stars.svg" class="shop__tree-menu-category-img"></i>
+                            Best Sellers
+                        </div>
+                    </summary>
+                    <ul class="shop__sub-menu">
+                        <li class="shop__tree-menu-category-item">
+                            <i></i><img src="img/user.svg" class="shop__category-item-img"></i>
+                            <a href="">Puto</a>
+                        </li>
+                        <li class="shop__tree-menu-category-item">
+                            <i></i><img src="img/bolt.svg" class="shop__category-item-img"></i>
+                            <a href="">Earphone</a>
+                        </li>
+                        <li class="shop__tree-menu-category-item">
+                            <i></i><img src="img/music.svg" class="shop__category-item-img"></i>
+                            <a href="">Musical</a>
+                        </li>
+                        <li class="shop__tree-menu-category-item">
+                            <i></i><img src="img/unlock.svg" class="shop__category-item-img"></i>
+                            <a href="">Diasca</a>
+                        </li>
+                    </ul>
+                </details>
             </div>
-            <div class="shop__product-container">
-                <div class="shop__product-item">1</div>
-                <div class="shop__product-item">2</div>
-                <div class="shop__product-item">3</div>
-                <div class="shop__product-item">4</div>
-                <div class="shop__product-item">5</div>
-                <div class="shop__product-item">6</div>
-                <div class="shop__product-item">7</div>
-                <div class="shop__product-item">8</div>
-                <div class="shop__product-item">9</div>
-                <div class="shop__product-item">10</div>
-                <div class="shop__product-item">11</div>
-                <div class="shop__product-item">12</div>
+            <div class="shop__right-panel">
+                <div class="shop__product-container">
+                    <div class="shop__product-item">
+                        <div class="product__image-box">
+                            <span class="product__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">Phone Holder Sakti</h3>
+                            <div class="product__meta">
+                                <div class="product__rating">
+                                    <img src="img/star.svg" alt="Star" class="star-icon">
+                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                                </div>
+                                <span class="product__price">$29.90</span>
+                            </div>
+                            <div class="product__actions">
+                                <button class="btn btn--outline">Add to Chart</button>
+                                <button class="btn btn--solid">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shop__product-item">
+                        <div class="product__image-box">
+                            <span class="product__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">Phone Holder Sakti</h3>
+                            <div class="product__meta">
+                                <div class="product__rating">
+                                    <img src="img/star.svg" alt="Star" class="star-icon">
+                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                                </div>
+                                <span class="product__price">$29.90</span>
+                            </div>
+                            <div class="product__actions">
+                                <button class="btn btn--outline">Add to Chart</button>
+                                <button class="btn btn--solid">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__product-item">
+                        <div class="product__image-box">
+                            <span class="product__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">Phone Holder Sakti</h3>
+                            <div class="product__meta">
+                                <div class="product__rating">
+                                    <img src="img/star.svg" alt="Star" class="star-icon">
+                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                                </div>
+                                <span class="product__price">$29.90</span>
+                            </div>
+                            <div class="product__actions">
+                                <button class="btn btn--outline">Add to Chart</button>
+                                <button class="btn btn--solid">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__product-item">
+                        <div class="product__image-box">
+                            <span class="product__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">Phone Holder Sakti</h3>
+                            <div class="product__meta">
+                                <div class="product__rating">
+                                    <img src="img/star.svg" alt="Star" class="star-icon">
+                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                                </div>
+                                <span class="product__price">$29.90</span>
+                            </div>
+                            <div class="product__actions">
+                                <button class="btn btn--outline">Add to Chart</button>
+                                <button class="btn btn--solid">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__product-item">
+                        <div class="product__image-box">
+                            <span class="product__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">Phone Holder Sakti</h3>
+                            <div class="product__meta">
+                                <div class="product__rating">
+                                    <img src="img/star.svg" alt="Star" class="star-icon">
+                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                                </div>
+                                <span class="product__price">$29.90</span>
+                            </div>
+                            <div class="product__actions">
+                                <button class="btn btn--outline">Add to Chart</button>
+                                <button class="btn btn--solid">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__product-item">
+                        <div class="product__image-box">
+                            <span class="product__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">Phone Holder Sakti</h3>
+                            <div class="product__meta">
+                                <div class="product__rating">
+                                    <img src="img/star.svg" alt="Star" class="star-icon">
+                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                                </div>
+                                <span class="product__price">$29.90</span>
+                            </div>
+                            <div class="product__actions">
+                                <button class="btn btn--outline">Add to Chart</button>
+                                <button class="btn btn--solid">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__product-item">
+                        <div class="product__image-box">
+                            <span class="product__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">Phone Holder Sakti</h3>
+                            <div class="product__meta">
+                                <div class="product__rating">
+                                    <img src="img/star.svg" alt="Star" class="star-icon">
+                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                                </div>
+                                <span class="product__price">$29.90</span>
+                            </div>
+                            <div class="product__actions">
+                                <button class="btn btn--outline">Add to Chart</button>
+                                <button class="btn btn--solid">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__product-item">
+                        <div class="product__image-box">
+                            <span class="product__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                        </div>
+                        <div class="product__info">
+                            <h3 class="product__title">Phone Holder Sakti</h3>
+                            <div class="product__meta">
+                                <div class="product__rating">
+                                    <img src="img/star.svg" alt="Star" class="star-icon">
+                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                                </div>
+                                <span class="product__price">$29.90</span>
+                            </div>
+                            <div class="product__actions">
+                                <button class="btn btn--outline">Add to Chart</button>
+                                <button class="btn btn--solid">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop__pagination">
+                    <a href="#" class="pagination__btn"><img src="img/back.svg" alt="Back" class="arrow-icon"> Previous</a>
+                    <div class="pagination__numbers">
+                        <a href="#" class="page-num active">1</a>
+                        <a href="#" class="page-num">2</a>
+                        <a href="#" class="page-num">3</a>
+                        <span class="page-dots">...</span>
+                        <a href="#" class="page-num">8</a>
+                        <a href="#" class="page-num">9</a>
+                        <a href="#" class="page-num">10</a>
+                    </div>
+                    <a href="#" class="pagination__btn">Next<img src="img/back.svg" alt="Next" class="arrow-icon right-arrow"></a>
+                </div>
             </div>
         </div>
     </main>
