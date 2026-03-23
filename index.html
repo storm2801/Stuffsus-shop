@@ -7,266 +7,1414 @@
     <title>E-commerce</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="header__navbar">
-            <h1 class="header__title">Stuffsus</h1>
-            <ul class="header__list-container">
-                <li class="header__list-item"><a href="#">Home</a></li>
-                <li class="header__list-item"><a href="#">Shop</a></li>
-                <li class="header__list-item"><a href="#">Blog</a></li>
+    <input type="checkbox" id="sidebar-toggle" class="sidebar__toggle">
+    <label for="sidebar-toggle" class="sidebar__overlay"></label>
+    <header class="header" data-section="home">
+        <nav class="header__topbar">
+            <h1 class="header__logo-text">Stuffsus</h1>
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#" data-target="home">Home</a></li>
+                <li class="header__nav-item"><a href="#" data-target="shop">Shop</a></li>
+                <li class="header__nav-item"><a href="#" data-target="cta">Blog</a></li>
             </ul>
-            <div class="header__tools">
-                <a href="#"><img src="img/search.svg" class="header__img"></a>
-                <a href="#"><img src="img/carshoping.svg" class="header__img"></a>
-                <a href="#"><img src="img/user.svg" class="header__img"></a>
+            <div class="header__tool-list">
+                <a href="#" id="nav-search-btn"><img src="img/search.svg" class="header__tool-icon"></a>
+                <a href="#" id="nav-cart-btn" class="header__cart-btn"><img src="img/carshoping.svg" class="header__tool-icon"><span class="header__cart-badge" id="cart-badge">0</span></a>
+                <a href="#"><img src="img/user.svg" class="header__tool-icon"></a>
             </div>
+            <label for="sidebar-toggle" class="header__menu-btn" aria-label="Open menu">
+                <img src="img/menu.svg">
+            </label>
         </nav>
-        <h2 class="header__background-txt">Shop</h2>
-        <div class="header__navbar-second">
-            <h2 class="header__title-second">Give All You Need</h2>
-            <div class="header__search">
-                <!-- <img src="img/search.svg" class="header__search-img"> -->
-                <input class="header__search-input" type="text" placeholder="Search on Stuffsus">
-                <button type="submit" class="header__search-button">Search</button>
+        <h2 class="header__bg-text">Shop</h2>
+        <div class="header__bottom-bar">
+            <h2 class="header__tagline">Give All You Need</h2>
+            <div class="header__search-bar">
+                
+                <input class="header__search-bar-field" id="main-search" type="text" placeholder="Search on Stuffsus">
+                <button type="submit" class="header__search-bar-btn">Search</button>
             </div>
         </div>
     </header>
-    <main class="shop">
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <span class="sidebar__logo">Stuffsus</span>
+            <label for="sidebar-toggle" class="sidebar__close" aria-label="Close menu">
+                <img src="img/close.svg" class="sidebar__close-icon">
+            </label>
+        </div>
+        <nav class="sidebar__nav">
+            <a href="#" data-target="home" class="sidebar__nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Home
+            </a>
+            <a href="#" data-target="shop" class="sidebar__nav-link sidebar__nav-link--active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Shop
+            </a>
+            <a href="#" data-target="cta" class="sidebar__nav-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                Blog
+            </a>
+        </nav>
+        <div class="sidebar__divider"></div>
+        <div class="sidebar__tools">
+            <a href="#" class="sidebar__action-link">
+                <img src="img/search.svg" class="sidebar__action-icon"> Search
+            </a>
+            <a href="#" class="sidebar__action-link">
+                <img src="img/carshoping.svg" class="sidebar__action-icon"> Cart
+            </a>
+            <a href="#" class="sidebar__action-link">
+                <img src="img/user.svg" class="sidebar__action-icon"> Account
+            </a>
+        </div>
+    </aside>
+    <main class="shop" data-section="shop">
+
+        
         <div class="shop__box">
-            <div class="shop__tree-menu">
-                <h2 class="shop__tree-menu-title">Category</h2>
+            <div class="shop__grid">
+                <div class="shop__menu">
+                <h2 class="shop__menu-title">Category</h2>
                 <details open class="shop__details">
-                    <summary class="shop__summary shop__summary--active">
-                        <div class="shop__summary-content">
-                            <i><img src="img/bag.svg" class="shop__tree-menu-category-img"></i>
+                    <summary class="shop__summary shop__summary--open">
+                        <div class="shop__summary-inner">
+                            <i><img src="img/bag.svg" class="shop__category-icon"></i>
                             All Products
                         </div>
                     </summary>
-                    <ul class="shop__sub-menu">
-                        <li class="shop__tree-menu-category-item">
-                            <i></i><img src="img/house.svg" class="shop__category-item-img"></i>
+                    <ul class="shop__submenu">
+                        <li class="shop__category-item">
+                            <i></i><img src="img/house.svg" class="shop__item-icon"></i>
                             <a href="">For Home</a>
                         </li>
-                        <li class="shop__tree-menu-category-item">
-                            <i></i><img src="img/phone.svg" class="shop__category-item-img"></i>
+                        <li class="shop__category-item">
+                            <i></i><img src="img/phone.svg" class="shop__item-icon"></i>
                             <a href="">For Phone</a>
                         </li>
-                        <li class="shop__tree-menu-category-item">
-                            <i></i><img src="img/music.svg" class="shop__category-item-img"></i>
+                        <li class="shop__category-item">
+                            <i></i><img src="img/music.svg" class="shop__item-icon"></i>
                             <a href="">For Music</a>
                         </li>
-                        <li class="shop__tree-menu-category-item">
-                            <i></i><img src="img/unlock.svg" class="shop__category-item-img"></i>
+                        <li class="shop__category-item">
+                            <i></i><img src="img/unlock.svg" class="shop__item-icon"></i>
                             <a href="">For Segurity</a>
                         </li>
                     </ul>
                 </details>
                 <details class="shop__details">
-                    <summary class="shop__summary shop__summary--active">
-                        <div class="shop__summary-content">
-                            <i><img src="img/stars.svg" class="shop__tree-menu-category-img"></i>
+                    <summary class="shop__summary shop__summary--open">
+                        <div class="shop__summary-inner">
+                            <i><img src="img/stars.svg" class="shop__category-icon"></i>
                             Best Sellers
                         </div>
                     </summary>
-                    <ul class="shop__sub-menu">
-                        <li class="shop__tree-menu-category-item">
-                            <i></i><img src="img/user.svg" class="shop__category-item-img"></i>
+                    <ul class="shop__submenu">
+                        <li class="shop__category-item">
+                            <i></i><img src="img/user.svg" class="shop__item-icon"></i>
                             <a href="">Puto</a>
                         </li>
-                        <li class="shop__tree-menu-category-item">
-                            <i></i><img src="img/bolt.svg" class="shop__category-item-img"></i>
+                        <li class="shop__category-item">
+                            <i></i><img src="img/bolt.svg" class="shop__item-icon"></i>
                             <a href="">Earphone</a>
                         </li>
-                        <li class="shop__tree-menu-category-item">
-                            <i></i><img src="img/music.svg" class="shop__category-item-img"></i>
+                        <li class="shop__category-item">
+                            <i></i><img src="img/music.svg" class="shop__item-icon"></i>
                             <a href="">Musical</a>
                         </li>
-                        <li class="shop__tree-menu-category-item">
-                            <i></i><img src="img/unlock.svg" class="shop__category-item-img"></i>
+                        <li class="shop__category-item">
+                            <i></i><img src="img/unlock.svg" class="shop__item-icon"></i>
                             <a href="">Diasca</a>
                         </li>
                     </ul>
                 </details>
-            </div>
-            <div class="shop__right-panel">
-                <div class="shop__product-container">
-                    <div class="shop__product-item">
-                        <div class="product__image-box">
-                            <span class="product__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                </div>
+                <div class="shop__content">
+                    <div class="shop__grid-products">
+                        <div data-page="1" class="pager__page--visible">
+                    <div class="shop__card" data-id="1" data-name="Phone Holder Sakti" data-price="29.90">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Phone Holder Sakti" class="card__image">
                         </div>
-                        <div class="product__info">
-                            <h3 class="product__title">Phone Holder Sakti</h3>
-                            <div class="product__meta">
-                                <div class="product__rating">
-                                    <img src="img/star.svg" alt="Star" class="star-icon">
-                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                        <div class="card__info">
+                            <h3 class="card__title">Phone Holder Sakti</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    5.0 <span class="card__rating-count">(1.2k Reviews)</span>
                                 </div>
-                                <span class="product__price">$29.90</span>
+                                <span class="card__price">$29.90</span>
                             </div>
-                            <div class="product__actions">
-                                <button class="btn btn--outline">Add to Chart</button>
-                                <button class="btn btn--solid">Buy Now</button>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="1">−</button>
+                                    <span class="card__qty-num" data-cid="1">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="1">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="1">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="1">Buy Now</button>
                             </div>
                         </div>
                     </div>
-
-                    <div class="shop__product-item">
-                        <div class="product__image-box">
-                            <span class="product__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                    <div class="shop__card" data-id="2" data-name="Headsound Pro" data-price="12.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Music</span>
+                            <img src="img/tu-producto.png" alt="Headsound Pro" class="card__image">
                         </div>
-                        <div class="product__info">
-                            <h3 class="product__title">Phone Holder Sakti</h3>
-                            <div class="product__meta">
-                                <div class="product__rating">
-                                    <img src="img/star.svg" alt="Star" class="star-icon">
-                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                        <div class="card__info">
+                            <h3 class="card__title">Headsound Pro</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    5.0 <span class="card__rating-count">(1.2k Reviews)</span>
                                 </div>
-                                <span class="product__price">$29.90</span>
+                                <span class="card__price">$12.00</span>
                             </div>
-                            <div class="product__actions">
-                                <button class="btn btn--outline">Add to Chart</button>
-                                <button class="btn btn--solid">Buy Now</button>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="2">−</button>
+                                    <span class="card__qty-num" data-cid="2">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="2">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="2">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="2">Buy Now</button>
                             </div>
                         </div>
                     </div>
-                    <div class="shop__product-item">
-                        <div class="product__image-box">
-                            <span class="product__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                    <div class="shop__card" data-id="3" data-name="Adudu Cleaner" data-price="29.90">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Adudu Cleaner" class="card__image">
                         </div>
-                        <div class="product__info">
-                            <h3 class="product__title">Phone Holder Sakti</h3>
-                            <div class="product__meta">
-                                <div class="product__rating">
-                                    <img src="img/star.svg" alt="Star" class="star-icon">
-                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                        <div class="card__info">
+                            <h3 class="card__title">Adudu Cleaner</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.4 <span class="card__rating-count">(1k Reviews)</span>
                                 </div>
-                                <span class="product__price">$29.90</span>
+                                <span class="card__price">$29.90</span>
                             </div>
-                            <div class="product__actions">
-                                <button class="btn btn--outline">Add to Chart</button>
-                                <button class="btn btn--solid">Buy Now</button>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="3">−</button>
+                                    <span class="card__qty-num" data-cid="3">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="3">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="3">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="3">Buy Now</button>
                             </div>
                         </div>
                     </div>
-                    <div class="shop__product-item">
-                        <div class="product__image-box">
-                            <span class="product__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                    <div class="shop__card" data-id="4" data-name="CCTV Maling" data-price="50.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Home</span>
+                            <img src="img/tu-producto.png" alt="CCTV Maling" class="card__image">
                         </div>
-                        <div class="product__info">
-                            <h3 class="product__title">Phone Holder Sakti</h3>
-                            <div class="product__meta">
-                                <div class="product__rating">
-                                    <img src="img/star.svg" alt="Star" class="star-icon">
-                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                        <div class="card__info">
+                            <h3 class="card__title">CCTV Maling</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.8 <span class="card__rating-count">(120 Reviews)</span>
                                 </div>
-                                <span class="product__price">$29.90</span>
+                                <span class="card__price">$50.00</span>
                             </div>
-                            <div class="product__actions">
-                                <button class="btn btn--outline">Add to Chart</button>
-                                <button class="btn btn--solid">Buy Now</button>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="4">−</button>
+                                    <span class="card__qty-num" data-cid="4">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="4">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="4">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="4">Buy Now</button>
                             </div>
                         </div>
                     </div>
-                    <div class="shop__product-item">
-                        <div class="product__image-box">
-                            <span class="product__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                    <div class="shop__card" data-id="5" data-name="Stuffus Peker 32" data-price="9.90">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Stuffus Peker 32" class="card__image">
                         </div>
-                        <div class="product__info">
-                            <h3 class="product__title">Phone Holder Sakti</h3>
-                            <div class="product__meta">
-                                <div class="product__rating">
-                                    <img src="img/star.svg" alt="Star" class="star-icon">
-                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                        <div class="card__info">
+                            <h3 class="card__title">Stuffus Peker 32</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    5.0 <span class="card__rating-count">(1.3k Reviews)</span>
                                 </div>
-                                <span class="product__price">$29.90</span>
+                                <span class="card__price">$9.90</span>
                             </div>
-                            <div class="product__actions">
-                                <button class="btn btn--outline">Add to Chart</button>
-                                <button class="btn btn--solid">Buy Now</button>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="5">−</button>
+                                    <span class="card__qty-num" data-cid="5">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="5">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="5">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="5">Buy Now</button>
                             </div>
                         </div>
                     </div>
-                    <div class="shop__product-item">
-                        <div class="product__image-box">
-                            <span class="product__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                    <div class="shop__card" data-id="6" data-name="Stuffus R175" data-price="34.10">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Music</span>
+                            <img src="img/tu-producto.png" alt="Stuffus R175" class="card__image">
                         </div>
-                        <div class="product__info">
-                            <h3 class="product__title">Phone Holder Sakti</h3>
-                            <div class="product__meta">
-                                <div class="product__rating">
-                                    <img src="img/star.svg" alt="Star" class="star-icon">
-                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                        <div class="card__info">
+                            <h3 class="card__title">Stuffus R175</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.8 <span class="card__rating-count">(2.4k Reviews)</span>
                                 </div>
-                                <span class="product__price">$29.90</span>
+                                <span class="card__price">$34.10</span>
                             </div>
-                            <div class="product__actions">
-                                <button class="btn btn--outline">Add to Chart</button>
-                                <button class="btn btn--solid">Buy Now</button>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="6">−</button>
+                                    <span class="card__qty-num" data-cid="6">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="6">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="6">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="6">Buy Now</button>
                             </div>
                         </div>
                     </div>
-                    <div class="shop__product-item">
-                        <div class="product__image-box">
-                            <span class="product__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                    <div class="shop__card" data-id="7" data-name="Smart Plug X" data-price="19.90">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Home</span>
+                            <img src="img/tu-producto.png" alt="Smart Plug X" class="card__image">
                         </div>
-                        <div class="product__info">
-                            <h3 class="product__title">Phone Holder Sakti</h3>
-                            <div class="product__meta">
-                                <div class="product__rating">
-                                    <img src="img/star.svg" alt="Star" class="star-icon">
-                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                        <div class="card__info">
+                            <h3 class="card__title">Smart Plug X</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.6 <span class="card__rating-count">(890 Reviews)</span>
                                 </div>
-                                <span class="product__price">$29.90</span>
+                                <span class="card__price">$19.90</span>
                             </div>
-                            <div class="product__actions">
-                                <button class="btn btn--outline">Add to Chart</button>
-                                <button class="btn btn--solid">Buy Now</button>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="7">−</button>
+                                    <span class="card__qty-num" data-cid="7">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="7">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="7">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="7">Buy Now</button>
                             </div>
                         </div>
                     </div>
-                    <div class="shop__product-item">
-                        <div class="product__image-box">
-                            <span class="product__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Producto" class="product__img">
+                    <div class="shop__card" data-id="8" data-name="BT Speaker Mini" data-price="45.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Music</span>
+                            <img src="img/tu-producto.png" alt="BT Speaker Mini" class="card__image">
                         </div>
-                        <div class="product__info">
-                            <h3 class="product__title">Phone Holder Sakti</h3>
-                            <div class="product__meta">
-                                <div class="product__rating">
-                                    <img src="img/star.svg" alt="Star" class="star-icon">
-                                    5.0 <span class="rating-count">(1.2k Reviews)</span>
+                        <div class="card__info">
+                            <h3 class="card__title">BT Speaker Mini</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.7 <span class="card__rating-count">(540 Reviews)</span>
                                 </div>
-                                <span class="product__price">$29.90</span>
+                                <span class="card__price">$45.00</span>
                             </div>
-                            <div class="product__actions">
-                                <button class="btn btn--outline">Add to Chart</button>
-                                <button class="btn btn--solid">Buy Now</button>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="8">−</button>
+                                    <span class="card__qty-num" data-cid="8">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="8">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="8">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="8">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="9" data-name="USB Hub 7-in-1" data-price="38.50">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="USB Hub 7-in-1" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">USB Hub 7-in-1</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.9 <span class="card__rating-count">(2.1k Reviews)</span>
+                                </div>
+                                <span class="card__price">$38.50</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="9">−</button>
+                                    <span class="card__qty-num" data-cid="9">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="9">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="9">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="9">Buy Now</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="shop__pagination">
-                    <a href="#" class="pagination__btn"><img src="img/back.svg" alt="Back" class="arrow-icon"> Previous</a>
-                    <div class="pagination__numbers">
-                        <a href="#" class="page-num active">1</a>
-                        <a href="#" class="page-num">2</a>
-                        <a href="#" class="page-num">3</a>
-                        <span class="page-dots">...</span>
-                        <a href="#" class="page-num">8</a>
-                        <a href="#" class="page-num">9</a>
-                        <a href="#" class="page-num">10</a>
+                        <div data-page="2" class="pager__page--hidden">
+                    <div class="shop__card" data-id="10" data-name="Ring Light 12in" data-price="24.90">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Ring Light 12in" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Ring Light 12in</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.5 <span class="card__rating-count">(670 Reviews)</span>
+                                </div>
+                                <span class="card__price">$24.90</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="10">−</button>
+                                    <span class="card__qty-num" data-cid="10">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="10">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="10">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="10">Buy Now</button>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="pagination__btn">Next<img src="img/back.svg" alt="Next" class="arrow-icon right-arrow"></a>
+                    <div class="shop__card" data-id="11" data-name="Desk Organizer" data-price="15.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Home</span>
+                            <img src="img/tu-producto.png" alt="Desk Organizer" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Desk Organizer</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.3 <span class="card__rating-count">(310 Reviews)</span>
+                                </div>
+                                <span class="card__price">$15.00</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="11">−</button>
+                                    <span class="card__qty-num" data-cid="11">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="11">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="11">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="11">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="12" data-name="Wireless Charger" data-price="27.90">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Phone</span>
+                            <img src="img/tu-producto.png" alt="Wireless Charger" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Wireless Charger</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.8 <span class="card__rating-count">(1.8k Reviews)</span>
+                                </div>
+                                <span class="card__price">$27.90</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="12">−</button>
+                                    <span class="card__qty-num" data-cid="12">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="12">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="12">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="12">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="13" data-name="Keyboard Cover" data-price="8.50">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Phone</span>
+                            <img src="img/tu-producto.png" alt="Keyboard Cover" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Keyboard Cover</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.6 <span class="card__rating-count">(420 Reviews)</span>
+                                </div>
+                                <span class="card__price">$8.50</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="13">−</button>
+                                    <span class="card__qty-num" data-cid="13">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="13">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="13">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="13">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="14" data-name="Noise Cancel Ear" data-price="59.90">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Music</span>
+                            <img src="img/tu-producto.png" alt="Noise Cancel Ear" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Noise Cancel Ear</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    5.0 <span class="card__rating-count">(3.1k Reviews)</span>
+                                </div>
+                                <span class="card__price">$59.90</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="14">−</button>
+                                    <span class="card__qty-num" data-cid="14">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="14">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="14">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="14">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="15" data-name="LED Strip 5m" data-price="14.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Home</span>
+                            <img src="img/tu-producto.png" alt="LED Strip 5m" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">LED Strip 5m</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.7 <span class="card__rating-count">(1.5k Reviews)</span>
+                                </div>
+                                <span class="card__price">$14.00</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="15">−</button>
+                                    <span class="card__qty-num" data-cid="15">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="15">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="15">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="15">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="16" data-name="Cam Lens 0.6x" data-price="22.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Phone</span>
+                            <img src="img/tu-producto.png" alt="Cam Lens 0.6x" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Cam Lens 0.6x</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.4 <span class="card__rating-count">(280 Reviews)</span>
+                                </div>
+                                <span class="card__price">$22.00</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="16">−</button>
+                                    <span class="card__qty-num" data-cid="16">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="16">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="16">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="16">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="17" data-name="Laptop Stand Pro" data-price="42.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Laptop Stand Pro" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Laptop Stand Pro</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.9 <span class="card__rating-count">(740 Reviews)</span>
+                                </div>
+                                <span class="card__price">$42.00</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="17">−</button>
+                                    <span class="card__qty-num" data-cid="17">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="17">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="17">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="17">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="18" data-name="Air Purifier Mini" data-price="89.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Home</span>
+                            <img src="img/tu-producto.png" alt="Air Purifier Mini" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Air Purifier Mini</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.6 <span class="card__rating-count">(195 Reviews)</span>
+                                </div>
+                                <span class="card__price">$89.00</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="18">−</button>
+                                    <span class="card__qty-num" data-cid="18">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="18">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="18">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="18">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        <div data-page="3" class="pager__page--hidden">
+                    <div class="shop__card" data-id="19" data-name="Foldable Keyboard" data-price="35.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Phone</span>
+                            <img src="img/tu-producto.png" alt="Foldable Keyboard" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Foldable Keyboard</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.5 <span class="card__rating-count">(560 Reviews)</span>
+                                </div>
+                                <span class="card__price">$35.00</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="19">−</button>
+                                    <span class="card__qty-num" data-cid="19">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="19">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="19">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="19">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="20" data-name="Security Lock 2x" data-price="18.90">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Home</span>
+                            <img src="img/tu-producto.png" alt="Security Lock 2x" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Security Lock 2x</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.3 <span class="card__rating-count">(430 Reviews)</span>
+                                </div>
+                                <span class="card__price">$18.90</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="20">−</button>
+                                    <span class="card__qty-num" data-cid="20">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="20">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="20">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="20">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="21" data-name="Car Phone Mount" data-price="11.50">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Phone</span>
+                            <img src="img/tu-producto.png" alt="Car Phone Mount" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Car Phone Mount</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.7 <span class="card__rating-count">(2.3k Reviews)</span>
+                                </div>
+                                <span class="card__price">$11.50</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="21">−</button>
+                                    <span class="card__qty-num" data-cid="21">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="21">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="21">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="21">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="22" data-name="Portable SSD 1TB" data-price="79.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="Portable SSD 1TB" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Portable SSD 1TB</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.9 <span class="card__rating-count">(3.8k Reviews)</span>
+                                </div>
+                                <span class="card__price">$79.00</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="22">−</button>
+                                    <span class="card__qty-num" data-cid="22">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="22">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="22">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="22">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="23" data-name="Vinyl Turntable" data-price="120.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Music</span>
+                            <img src="img/tu-producto.png" alt="Vinyl Turntable" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Vinyl Turntable</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.8 <span class="card__rating-count">(620 Reviews)</span>
+                                </div>
+                                <span class="card__price">$120.00</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="23">−</button>
+                                    <span class="card__qty-num" data-cid="23">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="23">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="23">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="23">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="24" data-name="Smart Door Bell" data-price="64.90">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Home</span>
+                            <img src="img/tu-producto.png" alt="Smart Door Bell" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Smart Door Bell</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.6 <span class="card__rating-count">(870 Reviews)</span>
+                                </div>
+                                <span class="card__price">$64.90</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="24">−</button>
+                                    <span class="card__qty-num" data-cid="24">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="24">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="24">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="24">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="25" data-name="Clip-on Mic" data-price="31.00">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Music</span>
+                            <img src="img/tu-producto.png" alt="Clip-on Mic" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Clip-on Mic</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.7 <span class="card__rating-count">(1.1k Reviews)</span>
+                                </div>
+                                <span class="card__price">$31.00</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="25">−</button>
+                                    <span class="card__qty-num" data-cid="25">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="25">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="25">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="25">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="26" data-name="Screen Protector" data-price="7.90">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Phone</span>
+                            <img src="img/tu-producto.png" alt="Screen Protector" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">Screen Protector</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.5 <span class="card__rating-count">(4.2k Reviews)</span>
+                                </div>
+                                <span class="card__price">$7.90</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="26">−</button>
+                                    <span class="card__qty-num" data-cid="26">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="26">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="26">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="26">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shop__card" data-id="27" data-name="RGB Mouse Pad XL" data-price="22.50">
+                        <div class="card__image-wrap">
+                            <span class="card__badge">Other</span>
+                            <img src="img/tu-producto.png" alt="RGB Mouse Pad XL" class="card__image">
+                        </div>
+                        <div class="card__info">
+                            <h3 class="card__title">RGB Mouse Pad XL</h3>
+                            <div class="card__meta">
+                                <div class="card__rating">
+                                    <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                    4.8 <span class="card__rating-count">(950 Reviews)</span>
+                                </div>
+                                <span class="card__price">$22.50</span>
+                            </div>
+                            <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="27">−</button>
+                                    <span class="card__qty-num" data-cid="27">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="27">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="27">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="27">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                    <div class="shop__pager">
+                        <div class="pager__numbers">
+                            <a href="#" class="pager__arrow" id="btn-prev"><img src="img/back.svg" alt="Previous" class="pager__arrow-icon"></a>
+                            <a href="#" class="pager__number active" data-p="1">1</a>
+                            <a href="#" class="pager__number" data-p="2">2</a>
+                            <a href="#" class="pager__number" data-p="3">3</a>
+                            <a href="#" class="pager__arrow" id="btn-next"><img src="img/back.svg" alt="Next" class="pager__arrow-icon pager__arrow--right"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
+
+        
+        <section class="explore">
+            <div class="explore__heading">
+                <h2 class="explore__heading-text">Explore our recommendations</h2>
+                <div class="explore__controls">
+                    <a href="#" class="explore__btn explore__btn--prev" aria-label="Previous">
+                        <img src="img/back.svg" class="pager__arrow-icon">
+                    </a>
+                    <a href="#" class="explore__btn explore__btn--next" aria-label="Next">
+                        <img src="img/back.svg" class="pager__arrow-icon pager__arrow--right">
+                    </a>
+                </div>
+            </div>
+            <div class="explore__slider">
+                <div class="explore__card shop__card" data-id="28" data-name="TWS Bujug" data-price="29.90">
+                    <div class="card__image-wrap">
+                        <span class="card__badge">Other</span>
+                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__title">TWS Bujug</h3>
+                        <div class="card__meta">
+                            <div class="card__rating">
+                                <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                5.0 <span class="card__rating-count">(1.2k Reviews)</span>
+                            </div>
+                            <span class="card__price">$29.90</span>
+                        </div>
+                        <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="28">−</button>
+                                    <span class="card__qty-num" data-cid="28">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="28">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="28">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="28">Buy Now</button>
+                            </div>
+                    </div>
+                </div>
+                <div class="explore__card shop__card" data-id="29" data-name="Headsound Baptis" data-price="12.00">
+                    <div class="card__image-wrap">
+                        <span class="card__badge">Music</span>
+                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__title">Headsound Baptis</h3>
+                        <div class="card__meta">
+                            <div class="card__rating">
+                                <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                5.0 <span class="card__rating-count">(1.2k Reviews)</span>
+                            </div>
+                            <span class="card__price">$12.00</span>
+                        </div>
+                        <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="29">−</button>
+                                    <span class="card__qty-num" data-cid="29">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="29">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="29">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="29">Buy Now</button>
+                            </div>
+                    </div>
+                </div>
+                <div class="explore__card shop__card" data-id="30" data-name="Adudu Cleaner" data-price="29.90">
+                    <div class="card__image-wrap">
+                        <span class="card__badge">Music</span>
+                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__title">Adudu Cleaner</h3>
+                        <div class="card__meta">
+                            <div class="card__rating">
+                                <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                4.4 <span class="card__rating-count">(1k Reviews)</span>
+                            </div>
+                            <span class="card__price">$29.90</span>
+                        </div>
+                        <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="30">−</button>
+                                    <span class="card__qty-num" data-cid="30">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="30">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="30">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="30">Buy Now</button>
+                            </div>
+                    </div>
+                </div>
+                <div class="explore__card shop__card" data-id="31" data-name="Phone Holder Sakti" data-price="29.90">
+                    <div class="card__image-wrap">
+                        <span class="card__badge">Other</span>
+                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__title">Phone Holder Sakti</h3>
+                        <div class="card__meta">
+                            <div class="card__rating">
+                                <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                5.0 <span class="card__rating-count">(1.2k Reviews)</span>
+                            </div>
+                            <span class="card__price">$29.90</span>
+                        </div>
+                        <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="31">−</button>
+                                    <span class="card__qty-num" data-cid="31">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="31">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="31">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="31">Buy Now</button>
+                            </div>
+                    </div>
+                </div>
+                <div class="explore__card shop__card" data-id="32" data-name="CCTV Maling" data-price="50.00">
+                    <div class="card__image-wrap">
+                        <span class="card__badge">Home</span>
+                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__title">CCTV Maling</h3>
+                        <div class="card__meta">
+                            <div class="card__rating">
+                                <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                4.8 <span class="card__rating-count">(120 Reviews)</span>
+                            </div>
+                            <span class="card__price">$50.00</span>
+                        </div>
+                        <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="32">−</button>
+                                    <span class="card__qty-num" data-cid="32">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="32">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="32">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="32">Buy Now</button>
+                            </div>
+                    </div>
+                </div>
+                <div class="explore__card shop__card" data-id="33" data-name="Stuffus R175" data-price="34.10">
+                    <div class="card__image-wrap">
+                        <span class="card__badge">Music</span>
+                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__title">Stuffus R175</h3>
+                        <div class="card__meta">
+                            <div class="card__rating">
+                                <img src="img/star.svg" alt="Star" class="card__star-icon">
+                                4.8 <span class="card__rating-count">(2.4k Reviews)</span>
+                            </div>
+                            <span class="card__price">$34.10</span>
+                        </div>
+                        <div class="card__actions">
+                                <div class="card__qty">
+                                    <button class="card__qty-btn card__qty-btn--minus" data-cid="33">−</button>
+                                    <span class="card__qty-num" data-cid="33">1</span>
+                                    <button class="card__qty-btn card__qty-btn--plus" data-cid="33">+</button>
+                                </div>
+                                <button class="btn btn--secondary card__add-btn" data-cid="33">Add to Cart</button>
+                                <button class="btn btn--primary card__buy-btn" data-cid="33">Buy Now</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
     </main>
+
+    
+    <section class="cta" data-section="cta">
+        <div class="cta__inner">
+            <div class="cta__left">
+                <h2 class="cta__heading">Ready to Get<br>Our New Stuff?</h2>
+                <div class="cta__email-bar">
+                    <input class="cta__email-field" type="email" placeholder="Your Email">
+                    <button type="submit" class="cta__email-btn">Send</button>
+                </div>
+            </div>
+            <div class="cta__right">
+                <h3 class="cta__description-title">Stuffsus for Homes and Needs</h3>
+                <p class="cta__description-text">We'll listen to your needs, identify the best approach, and then create a bespoke smart EV charging solution that's right for you.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <footer class="footer" id="footer">
+        <div class="footer__columns">
+            <div class="footer__col">
+                <h4 class="footer__heading">About</h4>
+                <ul class="footer__link-list">
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Meet The Team</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading">Support</h4>
+                <ul class="footer__link-list">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Return</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer__col footer__col--right">
+                <h4 class="footer__heading">Social Media</h4>
+                <div class="footer__social-list">
+                    <a href="#" class="footer__social-btn" aria-label="X / Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" class="footer__social-btn" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="#" class="footer__social-btn" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="#" class="footer__social-btn" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bar">
+            <p class="footer__copyright">Copyright &copy; 2026 Liongku. All Rights Reserved</p>
+            <div class="footer__legal-list">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+    
+
+    
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer__header">
+            <h2 class="cart-drawer__title">Your Cart</h2>
+            <button class="cart-drawer__close" id="cart-close">
+                <img src="img/close.svg" class="cart-drawer__close-icon">
+            </button>
+        </div>
+        <div class="cart-drawer__overlay" id="cart-overlay"></div>
+        <div class="cart-drawer__body" id="cart-body">
+            <p class="cart-drawer__empty">Your cart is empty</p>
+        </div>
+        <div class="cart-drawer__footer">
+            <div class="cart-drawer__total">
+                <span class="cart-drawer__total-label">Total</span>
+                <span class="cart-drawer__total-price" id="cart-total">$0.00</span>
+            </div>
+            <button class="cart-drawer__checkout">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-drawer__backdrop" id="cart-backdrop"></div>
+    
+
+    <script>
+    (function () {
+        'use strict';
+
+        /* ─── 1. SMOOTH NAV SCROLL ─────────────────────────────── */
+        const navSearchBtn = document.getElementById('nav-search-btn');
+        const mainSearch   = document.getElementById('main-search');
+        if (navSearchBtn && mainSearch) {
+            navSearchBtn.addEventListener('click', e => {
+                e.preventDefault();
+                mainSearch.focus();
+            });
+        }
+
+        document.querySelectorAll('[data-target]').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const el = document.querySelector('[data-section="' + link.dataset.target + '"]');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const toggle = document.getElementById('sidebar-toggle');
+                if (toggle) toggle.checked = false;
+            });
+        });
+
+        /* ─── 2. SHOP PAGINATION ───────────────────────────────── */
+        const TOTAL_PAGES = 3;
+        let currentPage = 1;
+
+        function updateArrowState() {
+            const prev = document.getElementById('btn-prev');
+            const next = document.getElementById('btn-next');
+            if (!prev || !next) return;
+            // Dim prev arrow on page 1, next arrow on last page
+            prev.style.opacity = currentPage === 1 ? '0.3' : '1';
+            prev.style.pointerEvents = currentPage === 1 ? 'none' : 'auto';
+            next.style.opacity = currentPage === TOTAL_PAGES ? '0.3' : '1';
+            next.style.pointerEvents = currentPage === TOTAL_PAGES ? 'none' : 'auto';
+        }
+
+        function goToPage(page) {
+            if (page < 1 || page > TOTAL_PAGES) return;
+
+            // Animate out current page
+            const current = document.querySelector('[data-page="' + currentPage + '"]');
+            const next    = document.querySelector('[data-page="' + page + '"]');
+            if (!current || !next) return;
+
+            current.className = 'pager__page--hidden';
+            next.className    = 'pager__page--visible';
+
+            // Update number buttons
+            document.querySelectorAll('.pager__number').forEach(btn => {
+                btn.classList.toggle('active', parseInt(btn.dataset.p) === page);
+            });
+
+            currentPage = page;
+            updateArrowState();
+
+            // Scroll to shop top
+            const shopEl = document.querySelector('[data-section="shop"]');
+            if (shopEl) shopEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        const btnPrev = document.getElementById('btn-prev');
+        const btnNext = document.getElementById('btn-next');
+        if (btnPrev) btnPrev.addEventListener('click', e => { e.preventDefault(); goToPage(currentPage - 1); });
+        if (btnNext) btnNext.addEventListener('click', e => { e.preventDefault(); goToPage(currentPage + 1); });
+
+        document.querySelectorAll('.pager__number').forEach(btn => {
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                goToPage(parseInt(btn.dataset.p));
+            });
+        });
+
+        updateArrowState(); // Set initial state
+
+        /* ─── 3. EXPLORE SLIDER ────────────────────────────────── */
+        const track     = document.querySelector('.explore__slider');
+        const btnSlPrev = document.querySelector('.explore__btn--prev');
+        const btnSlNext = document.querySelector('.explore__btn--next');
+
+        function getScrollAmount() {
+            // Scroll by one item width + gap
+            const item = track && track.querySelector('.explore__card');
+            if (!item) return 260;
+            const style = window.getComputedStyle(track);
+            const gap   = parseFloat(style.gap) || 24;
+            return item.offsetWidth + gap;
+        }
+
+        function updateSliderArrows() {
+            if (!track || !btnSlPrev || !btnSlNext) return;
+            const atStart = track.scrollLeft <= 4;
+            const atEnd   = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+            btnSlPrev.style.opacity       = atStart ? '0.3' : '1';
+            btnSlPrev.style.pointerEvents = atStart ? 'none' : 'auto';
+            btnSlNext.style.opacity       = atEnd   ? '0.3' : '1';
+            btnSlNext.style.pointerEvents = atEnd   ? 'none' : 'auto';
+        }
+
+        if (btnSlPrev) {
+            btnSlPrev.addEventListener('click', e => {
+                e.preventDefault();
+                track.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+            });
+        }
+        if (btnSlNext) {
+            btnSlNext.addEventListener('click', e => {
+                e.preventDefault();
+                track.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+            });
+        }
+        if (track) {
+            track.addEventListener('scroll', updateSliderArrows, { passive: true });
+            updateSliderArrows(); // Set initial state
+        }
+
+    })();
+    </script>
+
+    <script>
+    /* ═══════════════════════════════════════════════
+       CART SYSTEM
+    ═══════════════════════════════════════════════ */
+    (function () {
+        'use strict';
+
+        // ── State ──────────────────────────────────
+        // cart = { [productId]: { name, price, qty, img } }
+        const cart = {};
+
+        // ── DOM refs ───────────────────────────────
+        const drawer    = document.getElementById('cart-drawer');
+        const backdrop  = document.getElementById('cart-backdrop');
+        const cartBody  = document.getElementById('cart-body');
+        const cartTotal = document.getElementById('cart-total');
+        const cartBadge = document.getElementById('cart-badge');
+        const navCartBtn = document.getElementById('nav-cart-btn');
+        const closeBtn  = document.getElementById('cart-close');
+
+        // ── Open / Close drawer ────────────────────
+        function openCart() {
+            drawer.classList.add('cart-drawer--open');
+            backdrop.classList.add('cart-drawer__backdrop--visible');
+        }
+        function closeCart() {
+            drawer.classList.remove('cart-drawer--open');
+            backdrop.classList.remove('cart-drawer__backdrop--visible');
+        }
+
+        navCartBtn && navCartBtn.addEventListener('click', e => { e.preventDefault(); openCart(); });
+        closeBtn   && closeBtn.addEventListener('click', closeCart);
+        backdrop   && backdrop.addEventListener('click', closeCart);
+
+        // Also wire sidebar cart link
+        document.querySelectorAll('.sidebar__action-link').forEach(link => {
+            if (link.textContent.trim().toLowerCase().includes('cart')) {
+                link.addEventListener('click', e => { e.preventDefault(); openCart(); });
+            }
+        });
+
+        // ── Quantity counters on cards ─────────────
+        function getQty(cid) {
+            const el = document.querySelector('.card__qty-num[data-cid="' + cid + '"]');
+            return el ? parseInt(el.textContent) : 1;
+        }
+        function setQty(cid, val) {
+            val = Math.max(1, Math.min(99, val));
+            document.querySelectorAll('.card__qty-num[data-cid="' + cid + '"]').forEach(el => {
+                el.textContent = val;
+            });
+        }
+
+        document.addEventListener('click', function (e) {
+            // − button
+            if (e.target.closest('.card__qty-btn--minus')) {
+                const cid = e.target.closest('.card__qty-btn--minus').dataset.cid;
+                setQty(cid, getQty(cid) - 1);
+                return;
+            }
+            // + button
+            if (e.target.closest('.card__qty-btn--plus')) {
+                const cid = e.target.closest('.card__qty-btn--plus').dataset.cid;
+                setQty(cid, getQty(cid) + 1);
+                return;
+            }
+            // Add to Cart
+            if (e.target.closest('.card__add-btn')) {
+                const cid  = e.target.closest('.card__add-btn').dataset.cid;
+                const card = document.querySelector('[data-id="' + cid + '"]');
+                if (!card) return;
+                addToCart(
+                    cid,
+                    card.dataset.name,
+                    parseFloat(card.dataset.price),
+                    getQty(cid),
+                    card.querySelector('.card__image')
+                );
+                animateBtn(e.target.closest('.card__add-btn'));
+                return;
+            }
+            // Buy Now — add 1 then open cart
+            if (e.target.closest('.card__buy-btn')) {
+                const cid  = e.target.closest('.card__buy-btn').dataset.cid;
+                const card = document.querySelector('[data-id="' + cid + '"]');
+                if (!card) return;
+                addToCart(
+                    cid,
+                    card.dataset.name,
+                    parseFloat(card.dataset.price),
+                    getQty(cid),
+                    card.querySelector('.card__image')
+                );
+                openCart();
+                return;
+            }
+            // Cart item − 
+            if (e.target.closest('.cart-item__ctrl-btn--minus')) {
+                const pid = e.target.closest('.cart-item__ctrl-btn--minus').dataset.pid;
+                changeCartQty(pid, -1);
+                return;
+            }
+            // Cart item +
+            if (e.target.closest('.cart-item__ctrl-btn--plus')) {
+                const pid = e.target.closest('.cart-item__ctrl-btn--plus').dataset.pid;
+                changeCartQty(pid, +1);
+                return;
+            }
+            // Cart item remove
+            if (e.target.closest('.cart-item__remove')) {
+                const pid = e.target.closest('.cart-item__remove').dataset.pid;
+                delete cart[pid];
+                renderCart();
+                return;
+            }
+        });
+
+        // ── Add / update cart ──────────────────────
+        function addToCart(id, name, price, qty, imgEl) {
+            const src = imgEl ? imgEl.src : '';
+            if (cart[id]) {
+                cart[id].qty += qty;
+            } else {
+                cart[id] = { name, price, qty, img: src };
+            }
+            renderCart();
+            flashBadge();
+        }
+
+        function changeCartQty(pid, delta) {
+            if (!cart[pid]) return;
+            cart[pid].qty += delta;
+            if (cart[pid].qty <= 0) delete cart[pid];
+            renderCart();
+        }
+
+        // ── Render cart drawer ─────────────────────
+        function renderCart() {
+            const ids = Object.keys(cart);
+
+            if (ids.length === 0) {
+                cartBody.innerHTML = '<p class="cart-drawer__empty">Your cart is empty</p>';
+                updateBadge(0);
+                cartTotal.textContent = '$0.00';
+                return;
+            }
+
+            let total = 0;
+            let totalQty = 0;
+            let html = '';
+
+            ids.forEach(pid => {
+                const item = cart[pid];
+                const sub  = item.price * item.qty;
+                total    += sub;
+                totalQty += item.qty;
+                html += `
+                <div class="cart-item" data-pid="${pid}">
+                    <div class="cart-item__thumb">
+                        <img src="${item.img}" alt="${item.name}">
+                    </div>
+                    <div class="cart-item__info">
+                        <span class="cart-item__name">${item.name}</span>
+                        <span class="cart-item__price">$${item.price.toFixed(2)} each</span>
+                    </div>
+                    <div class="cart-item__controls">
+                        <button class="cart-item__ctrl-btn cart-item__ctrl-btn--minus" data-pid="${pid}">−</button>
+                        <span class="cart-item__qty">${item.qty}</span>
+                        <button class="cart-item__ctrl-btn cart-item__ctrl-btn--plus" data-pid="${pid}">+</button>
+                    </div>
+                    <span class="cart-item__subtotal">$${sub.toFixed(2)}</span>
+                    <button class="cart-item__remove" data-pid="${pid}" title="Remove">✕</button>
+                </div>`;
+            });
+
+            cartBody.innerHTML = html;
+            cartTotal.textContent = '$' + total.toFixed(2);
+            updateBadge(totalQty);
+        }
+
+        // ── Badge ──────────────────────────────────
+        function updateBadge(n) {
+            cartBadge.textContent = n > 99 ? '99+' : n;
+            cartBadge.classList.toggle('header__cart-badge--visible', n > 0);
+        }
+
+        function flashBadge() {
+            cartBadge.style.transform = 'scale(1.4)';
+            setTimeout(() => { cartBadge.style.transform = ''; }, 200);
+        }
+
+        // ── Button feedback ────────────────────────
+        function animateBtn(btn) {
+            const orig = btn.textContent;
+            btn.textContent = '✓ Added';
+            btn.style.background = '#2a2a2a';
+            btn.style.color = '#fff';
+            btn.style.border = 'none';
+            setTimeout(() => {
+                btn.textContent = orig;
+                btn.style.background = '';
+                btn.style.color = '';
+                btn.style.border = '';
+            }, 1200);
+        }
+
+    })();
+    </script>
 </body>
 </html>
