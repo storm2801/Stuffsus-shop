@@ -45,23 +45,20 @@
         </div>
         <nav class="sidebar__nav">
             <a href="#" data-target="home" class="sidebar__nav-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <img src="img/house.svg" class="sidebar__nav-icon">
                 Home
             </a>
             <a href="#" data-target="shop" class="sidebar__nav-link sidebar__nav-link--active">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                <img src="img/bags.svg" class="sidebar__nav-icon">
                 Shop
             </a>
             <a href="#" data-target="cta" class="sidebar__nav-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <img src="img/file.svg" class="sidebar__nav-icon">
                 Blog
             </a>
         </nav>
         <div class="sidebar__divider"></div>
         <div class="sidebar__tools">
-            <a href="#" class="sidebar__action-link">
-                <img src="img/search.svg" class="sidebar__action-icon"> Search
-            </a>
             <a href="#" class="sidebar__action-link">
                 <img src="img/carshoping.svg" class="sidebar__action-icon"> Cart
             </a>
@@ -133,7 +130,7 @@
                 <div class="shop__content">
                     <div class="shop__grid-products">
                         <div data-page="1" class="pager__page--visible">
-                    <div class="shop__card" data-id="1" data-name="Phone Holder Sakti" data-price="29.90">
+                    <div class="shop__card" data-id="1" data-name="Phone Holder Sakti" data-price="29.90" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Other">
                         <div class="card__image-wrap">
                             <span class="card__badge">Other</span>
                             <img src="img/tu-producto.png" alt="Phone Holder Sakti" class="card__image">
@@ -158,7 +155,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="2" data-name="Headsound Pro" data-price="12.00">
+                    <div class="shop__card" data-id="2" data-name="Headsound Pro" data-price="12.00" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Music">
                         <div class="card__image-wrap">
                             <span class="card__badge">Music</span>
                             <img src="img/tu-producto.png" alt="Headsound Pro" class="card__image">
@@ -183,7 +180,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="3" data-name="Adudu Cleaner" data-price="29.90">
+                    <div class="shop__card" data-id="3" data-name="Adudu Cleaner" data-price="29.90" data-rating="4.4" data-reviews="1k Reviews" data-category="Other">
                         <div class="card__image-wrap">
                             <span class="card__badge">Other</span>
                             <img src="img/tu-producto.png" alt="Adudu Cleaner" class="card__image">
@@ -208,7 +205,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="4" data-name="CCTV Maling" data-price="50.00">
+                    <div class="shop__card" data-id="4" data-name="CCTV Maling" data-price="50.00" data-rating="4.8" data-reviews="120 Reviews" data-category="Home">
                         <div class="card__image-wrap">
                             <span class="card__badge">Home</span>
                             <img src="img/tu-producto.png" alt="CCTV Maling" class="card__image">
@@ -233,7 +230,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="5" data-name="Stuffus Peker 32" data-price="9.90">
+                    <div class="shop__card" data-id="5" data-name="Stuffus Peker 32" data-price="9.90" data-rating="5.0" data-reviews="1.3k Reviews" data-category="Other">
                         <div class="card__image-wrap">
                             <span class="card__badge">Other</span>
                             <img src="img/tu-producto.png" alt="Stuffus Peker 32" class="card__image">
@@ -258,7 +255,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="6" data-name="Stuffus R175" data-price="34.10">
+                    <div class="shop__card" data-id="6" data-name="Stuffus R175" data-price="34.10" data-rating="4.8" data-reviews="2.4k Reviews" data-category="Music">
                         <div class="card__image-wrap">
                             <span class="card__badge">Music</span>
                             <img src="img/tu-producto.png" alt="Stuffus R175" class="card__image">
@@ -283,7 +280,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="7" data-name="Smart Plug X" data-price="19.90">
+                    <div class="shop__card" data-id="7" data-name="Smart Plug X" data-price="19.90" data-rating="4.6" data-reviews="890 Reviews" data-category="Home">
                         <div class="card__image-wrap">
                             <span class="card__badge">Home</span>
                             <img src="img/tu-producto.png" alt="Smart Plug X" class="card__image">
@@ -308,7 +305,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="8" data-name="BT Speaker Mini" data-price="45.00">
+                    <div class="shop__card" data-id="8" data-name="BT Speaker Mini" data-price="45.00" data-rating="4.7" data-reviews="540 Reviews" data-category="Music">
                         <div class="card__image-wrap">
                             <span class="card__badge">Music</span>
                             <img src="img/tu-producto.png" alt="BT Speaker Mini" class="card__image">
@@ -333,7 +330,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="9" data-name="USB Hub 7-in-1" data-price="38.50">
+                    <div class="shop__card" data-id="9" data-name="USB Hub 7-in-1" data-price="38.50" data-rating="4.9" data-reviews="2.1k Reviews" data-category="Other">
                         <div class="card__image-wrap">
                             <span class="card__badge">Other</span>
                             <img src="img/tu-producto.png" alt="USB Hub 7-in-1" class="card__image">
@@ -360,7 +357,7 @@
                     </div>
                 </div>
                         <div data-page="2" class="pager__page--hidden">
-                    <div class="shop__card" data-id="10" data-name="Ring Light 12in" data-price="24.90">
+                    <div class="shop__card" data-id="10" data-name="Ring Light 12in" data-price="24.90" data-rating="4.5" data-reviews="670 Reviews" data-category="Other">
                         <div class="card__image-wrap">
                             <span class="card__badge">Other</span>
                             <img src="img/tu-producto.png" alt="Ring Light 12in" class="card__image">
@@ -385,7 +382,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="11" data-name="Desk Organizer" data-price="15.00">
+                    <div class="shop__card" data-id="11" data-name="Desk Organizer" data-price="15.00" data-rating="4.3" data-reviews="310 Reviews" data-category="Home">
                         <div class="card__image-wrap">
                             <span class="card__badge">Home</span>
                             <img src="img/tu-producto.png" alt="Desk Organizer" class="card__image">
@@ -410,7 +407,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="12" data-name="Wireless Charger" data-price="27.90">
+                    <div class="shop__card" data-id="12" data-name="Wireless Charger" data-price="27.90" data-rating="4.8" data-reviews="1.8k Reviews" data-category="Phone">
                         <div class="card__image-wrap">
                             <span class="card__badge">Phone</span>
                             <img src="img/tu-producto.png" alt="Wireless Charger" class="card__image">
@@ -435,7 +432,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="13" data-name="Keyboard Cover" data-price="8.50">
+                    <div class="shop__card" data-id="13" data-name="Keyboard Cover" data-price="8.50" data-rating="4.6" data-reviews="420 Reviews" data-category="Phone">
                         <div class="card__image-wrap">
                             <span class="card__badge">Phone</span>
                             <img src="img/tu-producto.png" alt="Keyboard Cover" class="card__image">
@@ -460,7 +457,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="14" data-name="Noise Cancel Ear" data-price="59.90">
+                    <div class="shop__card" data-id="14" data-name="Noise Cancel Ear" data-price="59.90" data-rating="5.0" data-reviews="3.1k Reviews" data-category="Music">
                         <div class="card__image-wrap">
                             <span class="card__badge">Music</span>
                             <img src="img/tu-producto.png" alt="Noise Cancel Ear" class="card__image">
@@ -485,7 +482,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="15" data-name="LED Strip 5m" data-price="14.00">
+                    <div class="shop__card" data-id="15" data-name="LED Strip 5m" data-price="14.00" data-rating="4.7" data-reviews="1.5k Reviews" data-category="Home">
                         <div class="card__image-wrap">
                             <span class="card__badge">Home</span>
                             <img src="img/tu-producto.png" alt="LED Strip 5m" class="card__image">
@@ -510,7 +507,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="16" data-name="Cam Lens 0.6x" data-price="22.00">
+                    <div class="shop__card" data-id="16" data-name="Cam Lens 0.6x" data-price="22.00" data-rating="4.4" data-reviews="280 Reviews" data-category="Phone">
                         <div class="card__image-wrap">
                             <span class="card__badge">Phone</span>
                             <img src="img/tu-producto.png" alt="Cam Lens 0.6x" class="card__image">
@@ -535,7 +532,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="17" data-name="Laptop Stand Pro" data-price="42.00">
+                    <div class="shop__card" data-id="17" data-name="Laptop Stand Pro" data-price="42.00" data-rating="4.9" data-reviews="740 Reviews" data-category="Other">
                         <div class="card__image-wrap">
                             <span class="card__badge">Other</span>
                             <img src="img/tu-producto.png" alt="Laptop Stand Pro" class="card__image">
@@ -560,7 +557,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="18" data-name="Air Purifier Mini" data-price="89.00">
+                    <div class="shop__card" data-id="18" data-name="Air Purifier Mini" data-price="89.00" data-rating="4.6" data-reviews="195 Reviews" data-category="Home">
                         <div class="card__image-wrap">
                             <span class="card__badge">Home</span>
                             <img src="img/tu-producto.png" alt="Air Purifier Mini" class="card__image">
@@ -587,7 +584,7 @@
                     </div>
                 </div>
                         <div data-page="3" class="pager__page--hidden">
-                    <div class="shop__card" data-id="19" data-name="Foldable Keyboard" data-price="35.00">
+                    <div class="shop__card" data-id="19" data-name="Foldable Keyboard" data-price="35.00" data-rating="4.5" data-reviews="560 Reviews" data-category="Phone">
                         <div class="card__image-wrap">
                             <span class="card__badge">Phone</span>
                             <img src="img/tu-producto.png" alt="Foldable Keyboard" class="card__image">
@@ -612,7 +609,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="20" data-name="Security Lock 2x" data-price="18.90">
+                    <div class="shop__card" data-id="20" data-name="Security Lock 2x" data-price="18.90" data-rating="4.3" data-reviews="430 Reviews" data-category="Home">
                         <div class="card__image-wrap">
                             <span class="card__badge">Home</span>
                             <img src="img/tu-producto.png" alt="Security Lock 2x" class="card__image">
@@ -637,7 +634,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="21" data-name="Car Phone Mount" data-price="11.50">
+                    <div class="shop__card" data-id="21" data-name="Car Phone Mount" data-price="11.50" data-rating="4.7" data-reviews="2.3k Reviews" data-category="Phone">
                         <div class="card__image-wrap">
                             <span class="card__badge">Phone</span>
                             <img src="img/tu-producto.png" alt="Car Phone Mount" class="card__image">
@@ -662,7 +659,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="22" data-name="Portable SSD 1TB" data-price="79.00">
+                    <div class="shop__card" data-id="22" data-name="Portable SSD 1TB" data-price="79.00" data-rating="4.9" data-reviews="3.8k Reviews" data-category="Other">
                         <div class="card__image-wrap">
                             <span class="card__badge">Other</span>
                             <img src="img/tu-producto.png" alt="Portable SSD 1TB" class="card__image">
@@ -687,7 +684,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="23" data-name="Vinyl Turntable" data-price="120.00">
+                    <div class="shop__card" data-id="23" data-name="Vinyl Turntable" data-price="120.00" data-rating="4.8" data-reviews="620 Reviews" data-category="Music">
                         <div class="card__image-wrap">
                             <span class="card__badge">Music</span>
                             <img src="img/tu-producto.png" alt="Vinyl Turntable" class="card__image">
@@ -712,7 +709,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="24" data-name="Smart Door Bell" data-price="64.90">
+                    <div class="shop__card" data-id="24" data-name="Smart Door Bell" data-price="64.90" data-rating="4.6" data-reviews="870 Reviews" data-category="Home">
                         <div class="card__image-wrap">
                             <span class="card__badge">Home</span>
                             <img src="img/tu-producto.png" alt="Smart Door Bell" class="card__image">
@@ -737,7 +734,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="25" data-name="Clip-on Mic" data-price="31.00">
+                    <div class="shop__card" data-id="25" data-name="Clip-on Mic" data-price="31.00" data-rating="4.7" data-reviews="1.1k Reviews" data-category="Music">
                         <div class="card__image-wrap">
                             <span class="card__badge">Music</span>
                             <img src="img/tu-producto.png" alt="Clip-on Mic" class="card__image">
@@ -762,7 +759,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="26" data-name="Screen Protector" data-price="7.90">
+                    <div class="shop__card" data-id="26" data-name="Screen Protector" data-price="7.90" data-rating="4.5" data-reviews="4.2k Reviews" data-category="Phone">
                         <div class="card__image-wrap">
                             <span class="card__badge">Phone</span>
                             <img src="img/tu-producto.png" alt="Screen Protector" class="card__image">
@@ -787,7 +784,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="27" data-name="RGB Mouse Pad XL" data-price="22.50">
+                    <div class="shop__card" data-id="27" data-name="RGB Mouse Pad XL" data-price="22.50" data-rating="4.8" data-reviews="950 Reviews" data-category="Other">
                         <div class="card__image-wrap">
                             <span class="card__badge">Other</span>
                             <img src="img/tu-producto.png" alt="RGB Mouse Pad XL" class="card__image">
@@ -842,7 +839,7 @@
                 </div>
             </div>
             <div class="explore__slider">
-                <div class="explore__card shop__card" data-id="28" data-name="TWS Bujug" data-price="29.90">
+                <div class="explore__card shop__card" data-id="28" data-name="TWS Bujug" data-price="29.90" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Other">
                     <div class="card__image-wrap">
                         <span class="card__badge">Other</span>
                         <img src="img/tu-producto.png" alt="Producto" class="card__image">
@@ -867,7 +864,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="explore__card shop__card" data-id="29" data-name="Headsound Baptis" data-price="12.00">
+                <div class="explore__card shop__card" data-id="29" data-name="Headsound Baptis" data-price="12.00" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Music">
                     <div class="card__image-wrap">
                         <span class="card__badge">Music</span>
                         <img src="img/tu-producto.png" alt="Producto" class="card__image">
@@ -892,7 +889,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="explore__card shop__card" data-id="30" data-name="Adudu Cleaner" data-price="29.90">
+                <div class="explore__card shop__card" data-id="30" data-name="Adudu Cleaner" data-price="29.90" data-rating="4.4" data-reviews="1k Reviews" data-category="Music">
                     <div class="card__image-wrap">
                         <span class="card__badge">Music</span>
                         <img src="img/tu-producto.png" alt="Producto" class="card__image">
@@ -917,7 +914,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="explore__card shop__card" data-id="31" data-name="Phone Holder Sakti" data-price="29.90">
+                <div class="explore__card shop__card" data-id="31" data-name="Phone Holder Sakti" data-price="29.90" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Other">
                     <div class="card__image-wrap">
                         <span class="card__badge">Other</span>
                         <img src="img/tu-producto.png" alt="Producto" class="card__image">
@@ -942,7 +939,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="explore__card shop__card" data-id="32" data-name="CCTV Maling" data-price="50.00">
+                <div class="explore__card shop__card" data-id="32" data-name="CCTV Maling" data-price="50.00" data-rating="4.8" data-reviews="120 Reviews" data-category="Home">
                     <div class="card__image-wrap">
                         <span class="card__badge">Home</span>
                         <img src="img/tu-producto.png" alt="Producto" class="card__image">
@@ -967,7 +964,7 @@
                             </div>
                     </div>
                 </div>
-                <div class="explore__card shop__card" data-id="33" data-name="Stuffus R175" data-price="34.10">
+                <div class="explore__card shop__card" data-id="33" data-name="Stuffus R175" data-price="34.10" data-rating="4.8" data-reviews="2.4k Reviews" data-category="Music">
                     <div class="card__image-wrap">
                         <span class="card__badge">Music</span>
                         <img src="img/tu-producto.png" alt="Producto" class="card__image">
@@ -1043,13 +1040,13 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </a>
                     <a href="#" class="footer__social-btn" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <img src="img/" alt="">
                     </a>
                     <a href="#" class="footer__social-btn" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        <img src="img/" alt="">
                     </a>
                     <a href="#" class="footer__social-btn" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        <img src="img/" alt="">
                     </a>
                 </div>
             </div>
@@ -1086,6 +1083,61 @@
     </div>
     <div class="cart-drawer__backdrop" id="cart-backdrop"></div>
     
+
+
+    <div class="product-detail" id="product-detail">
+        <div class="product-detail__backdrop" id="pd-backdrop"></div>
+        <div class="product-detail__panel">
+            <div class="product-detail__topbar">
+                <button class="product-detail__back" id="pd-close">
+                    <img src="img/back.svg" class="product-detail__back-icon">
+                    Back
+                </button>
+                <span class="product-detail__breadcrumb" id="pd-breadcrumb">Shop / <strong id="pd-category"></strong></span>
+            </div>
+            <div class="product-detail__body">
+                <div class="product-detail__gallery">
+                    <div class="product-detail__main-img-wrap">
+                        <span class="product-detail__badge" id="pd-badge"></span>
+                        <img src="" id="pd-main-img" class="product-detail__main-img" alt="">
+                    </div>
+                    <div class="product-detail__thumbs" id="pd-thumbs">
+                        <div class="product-detail__thumb product-detail__thumb--active"><img src="img/tu-producto.png" alt=""></div>
+                        <div class="product-detail__thumb"><img src="img/tu-producto.png" alt=""></div>
+                        <div class="product-detail__thumb"><img src="img/tu-producto.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="product-detail__info">
+                    <h1 class="product-detail__title" id="pd-title"></h1>
+                    <div class="product-detail__rating-row">
+                        <div class="product-detail__stars" id="pd-stars"></div>
+                        <span class="product-detail__rating-val" id="pd-rating"></span>
+                        <span class="product-detail__reviews" id="pd-reviews"></span>
+                    </div>
+                    <div class="product-detail__price-row">
+                        <span class="product-detail__price" id="pd-price"></span>
+                        <span class="product-detail__stock">In Stock</span>
+                    </div>
+                    <p class="product-detail__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula justo a urna fringilla, non tincidunt arcu tincidunt. Designed for everyday use with premium materials and an ergonomic form factor.</p>
+                    <ul class="product-detail__specs">
+                        <li><span>Brand</span><strong>Stuffsus</strong></li>
+                        <li><span>Category</span><strong id="pd-spec-cat"></strong></li>
+                        <li><span>Warranty</span><strong>12 months</strong></li>
+                        <li><span>Shipping</span><strong>Free over $50</strong></li>
+                    </ul>
+                    <div class="product-detail__actions">
+                        <div class="product-detail__qty">
+                            <button class="product-detail__qty-btn" id="pd-minus">−</button>
+                            <span class="product-detail__qty-num" id="pd-qty">1</span>
+                            <button class="product-detail__qty-btn" id="pd-plus">+</button>
+                        </div>
+                        <button class="btn btn--secondary product-detail__add-btn" id="pd-add">Add to Cart</button>
+                        <button class="btn btn--primary product-detail__buy-btn" id="pd-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
     (function () {
@@ -1379,7 +1431,7 @@
                         <button class="cart-item__ctrl-btn cart-item__ctrl-btn--plus" data-pid="${pid}">+</button>
                     </div>
                     <span class="cart-item__subtotal">$${sub.toFixed(2)}</span>
-                    <button class="cart-item__remove" data-pid="${pid}" title="Remove">✕</button>
+                    <button class="cart-item__remove" data-pid="${pid}" title="Remove"><img src="img/TU-ICONO.svg" class="cart-item__remove-icon" alt="Remove"></button>
                 </div>`;
             });
 
@@ -1413,6 +1465,144 @@
                 btn.style.border = '';
             }, 1200);
         }
+
+    })();
+    </script>
+
+    <script>
+    (function () {
+        var panel     = document.getElementById('product-detail');
+        var pdBackdrop = document.getElementById('pd-backdrop');
+        var pdClose   = document.getElementById('pd-close');
+        var pdMinus   = document.getElementById('pd-minus');
+        var pdPlus    = document.getElementById('pd-plus');
+        var pdQtyNum  = document.getElementById('pd-qty');
+        var pdAdd     = document.getElementById('pd-add');
+        var pdBuy     = document.getElementById('pd-buy');
+        var activeCid = null;
+        var pdQty     = 1;
+        var starCount = 0;
+
+        function openDetail(card) {
+            activeCid    = card.dataset.id;
+            pdQty        = 1;
+            var name     = card.dataset.name     || '';
+            var price    = card.dataset.price    || '0';
+            var rating   = card.dataset.rating   || '4.5';
+            var reviews  = card.dataset.reviews  || '0';
+            var category = card.dataset.category || 'Other';
+            var imgEl    = card.querySelector('.card__image');
+            var imgSrc   = imgEl ? imgEl.src : '';
+
+            document.getElementById('pd-title').textContent    = name;
+            document.getElementById('pd-price').textContent    = '$' + parseFloat(price).toFixed(2);
+            document.getElementById('pd-badge').textContent    = category;
+            document.getElementById('pd-category').textContent = category;
+            document.getElementById('pd-spec-cat').textContent = category;
+            document.getElementById('pd-rating').textContent   = rating;
+            document.getElementById('pd-reviews').textContent  = '(' + reviews + ' Reviews)';
+            document.getElementById('pd-main-img').src         = imgSrc;
+            document.getElementById('pd-main-img').alt         = name;
+            document.getElementById('pd-qty').textContent      = '1';
+
+            renderStars(parseFloat(rating));
+
+            panel.querySelectorAll('.product-detail__thumb img').forEach(function(img) {
+                img.src = imgSrc;
+            });
+
+            panel.classList.add('product-detail--open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDetail() {
+            panel.classList.remove('product-detail--open');
+            document.body.style.overflow = '';
+        }
+
+        function renderStars(rating) {
+            starCount++;
+            var uid = starCount;
+            var container = document.getElementById('pd-stars');
+            container.innerHTML = '';
+            for (var i = 1; i <= 5; i++) {
+                var fill = Math.min(1, Math.max(0, rating - (i - 1)));
+                var pct  = Math.round(fill * 100);
+                var gid  = 'star-' + uid + '-' + i;
+                var svg  = '<svg class="product-detail__star" viewBox="0 0 20 20">';
+                svg += '<defs><linearGradient id="' + gid + '">';
+                svg += '<stop offset="' + pct + '%" stop-color="#f5a623"/>';
+                svg += '<stop offset="' + pct + '%" stop-color="#e0e0e0"/>';
+                svg += '</linearGradient></defs>';
+                svg += '<polygon fill="url(#' + gid + ')" points="10,1 12.9,7 19.5,7.6 14.5,12 16.2,18.5 10,15 3.8,18.5 5.5,12 0.5,7.6 7.1,7"/>';
+                svg += '</svg>';
+                container.innerHTML += svg;
+            }
+        }
+
+        document.addEventListener('click', function(e) {
+            if (panel.classList.contains('product-detail--open')) return;
+            var card = e.target.closest('.shop__card');
+            if (!card) return;
+            if (e.target.closest('.card__actions')) return;
+            openDetail(card);
+        });
+
+        panel.addEventListener('click', function(e) {
+            var thumb = e.target.closest('.product-detail__thumb');
+            if (thumb) {
+                panel.querySelectorAll('.product-detail__thumb').forEach(function(t) {
+                    t.classList.remove('product-detail__thumb--active');
+                });
+                thumb.classList.add('product-detail__thumb--active');
+                document.getElementById('pd-main-img').src = thumb.querySelector('img').src;
+                e.stopPropagation();
+            }
+        });
+
+        pdMinus.addEventListener('click', function() {
+            pdQty = Math.max(1, pdQty - 1);
+            pdQtyNum.textContent = pdQty;
+        });
+        pdPlus.addEventListener('click', function() {
+            pdQty = Math.min(99, pdQty + 1);
+            pdQtyNum.textContent = pdQty;
+        });
+
+        pdAdd.addEventListener('click', function() {
+            var card = document.querySelector('[data-id="' + activeCid + '"]');
+            if (!card) return;
+            document.querySelectorAll('.card__qty-num[data-cid="' + activeCid + '"]').forEach(function(el) {
+                el.textContent = pdQty;
+            });
+            var addBtn = card.querySelector('.card__add-btn');
+            if (addBtn) addBtn.click();
+            pdAdd.textContent = 'Added!';
+            setTimeout(function() { pdAdd.textContent = 'Add to Cart'; }, 1200);
+        });
+
+        pdBuy.addEventListener('click', function() {
+            var card = document.querySelector('[data-id="' + activeCid + '"]');
+            if (!card) return;
+            document.querySelectorAll('.card__qty-num[data-cid="' + activeCid + '"]').forEach(function(el) {
+                el.textContent = pdQty;
+            });
+            var buyBtn = card.querySelector('.card__buy-btn');
+            if (buyBtn) buyBtn.click();
+            closeDetail();
+        });
+
+        pdClose.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeDetail();
+        });
+        pdBackdrop.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeDetail();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeDetail();
+        });
 
     })();
     </script>
