@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuffsus — Login</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg:       #f4f4f4;
+            --surface:  #ffffff;
+            --primary:  #1a1a1a;
+            --muted:    #888;
+            --ph:       #bbb;
+            --border:   #e0e0e0;
+            --focus:    #1a1a1a;
+            --error:    #e33;
+            --input-bg: #f9f9f9;
+        }
+
+        [data-theme="dark"] {
+            --bg:       #111;
+            --surface:  #1c1c1c;
+            --primary:  #ebebeb;
+            --muted:    #5a5a5a;
+            --ph:       #3a3a3a;
+            --border:   #2e2e2e;
+            --focus:    #ebebeb;
+            --error:    #ff5555;
+            --input-bg: #161616;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--primary);
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* ── Card ──────────────────────────────── */
+        .auth-card {
+            background: var(--surface);
+            border-radius: 22px;
+            padding: 40px 38px 36px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 6px 36px rgba(0,0,0,0.08);
+            transition: background 0.3s;
+        }
+
+        /* ── Header row ────────────────────────── */
+        .auth-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .auth-logo {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.4px;
+        }
+
+        .auth-theme-btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1.5px solid var(--border);
+            background: var(--bg);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            transition: background 0.2s, border-color 0.2s;
+            flex-shrink: 0;
+        }
+
+        .auth-theme-btn:hover { border-color: var(--primary); background: var(--border); }
+
+        .auth-tagline {
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        /* ── Tabs ──────────────────────────────── */
+        .auth-tabs {
+            position: relative;
+            display: flex;
+            background: var(--bg);
+            border-radius: 25px;
+            padding: 4px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .auth-tab-indicator {
+            position: absolute;
+            top: 4px; bottom: 4px; left: 4px;
+            width: calc(50% - 4px);
+            background: var(--surface);
+            border-radius: 21px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+        }
+
+        .auth-tab-indicator--reg { transform: translateX(100%); }
+
+        .auth-tab {
+            flex: 1;
+            padding: 9px;
+            border: none;
+            background: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--muted);
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            transition: color 0.25s;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 21px;
+        }
+
+        .auth-tab--active { color: var(--primary); }
+
+        /* ── Sliding forms ─────────────────────── */
+        .auth-forms-wrap { overflow: hidden; }
+
+        .auth-forms-slider {
+            display: flex;
+            width: 200%;
+            transition: transform 0.36s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .auth-forms-slider--reg { transform: translateX(-50%); }
+
+        .auth-form {
+            width: 50%;
+            min-width: 0;
+            flex-shrink: 0;
+            padding: 0 2px;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        /* ── Fields ────────────────────────────── */
+        .auth-field { display: flex; flex-direction: column; gap: 5px; }
+
+        .auth-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.02em;
+        }
+
+        .auth-input {
+            border: 1.5px solid var(--border);
+            border-radius: 25px;
+            padding: 11px 18px;
+            font-size: 0.9rem;
+            background: var(--input-bg);
+            color: var(--primary);
+            outline: none;
+            transition: border-color 0.2s, background 0.2s;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            -webkit-appearance: none;
+        }
+
+        .auth-input::placeholder { color: var(--ph); }
+        .auth-input:focus { border-color: var(--focus); background: var(--surface); }
+
+        [data-theme="dark"] .auth-input {
+            background: var(--input-bg);
+            color: var(--primary);
+            border-color: var(--border);
+        }
+
+        [data-theme="dark"] .auth-input:focus { border-color: var(--focus); background: #1e1e1e; }
+
+        /* ── Error ─────────────────────────────── */
+        .auth-error {
+            font-size: 0.77rem;
+            color: var(--error);
+            min-height: 16px;
+            padding: 0 4px;
+            display: none;
+        }
+        .auth-error--show { display: block; }
+
+        /* ── Submit ────────────────────────────── */
+        .auth-submit {
+            width: 100%;
+            padding: 13px;
+            border-radius: 25px;
+            border: none;
+            background: var(--primary);
+            color: var(--surface);
+            font-size: 0.92rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            margin-top: 2px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .auth-submit:hover { opacity: 0.84; }
+        .auth-submit:active { opacity: 0.7; transform: scale(0.99); }
+
+        /* ── Divider ────────────────────────────── */
+        .auth-divider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 2px 0;
+        }
+
+        .auth-divider::before, .auth-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .auth-divider span { font-size: 0.73rem; color: var(--muted); }
+
+        /* ── Guest ──────────────────────────────── */
+        .auth-guest {
+            width: 100%;
+            padding: 11px;
+            border-radius: 25px;
+            border: 1.5px solid var(--border);
+            background: none;
+            color: var(--muted);
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .auth-guest:hover { border-color: var(--primary); color: var(--primary); }
+
+        /* ── Footer ────────────────────────────── */
+        .auth-footer {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        @media (max-width: 480px) {
+            .auth-card { padding: 28px 20px 24px; border-radius: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-card">
+
+        <div class="auth-header">
+            <div class="auth-logo">Stuffsus</div>
+            <button class="auth-theme-btn" id="theme-btn" aria-label="Toggle theme">
+                <svg id="theme-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+
+        <p class="auth-tagline">Give All You Need</p>
+
+        <div class="auth-tabs">
+            <div class="auth-tab-indicator" id="tab-indicator"></div>
+            <button class="auth-tab auth-tab--active" id="tab-login">Log In</button>
+            <button class="auth-tab" id="tab-register">Register</button>
+        </div>
+
+        <div class="auth-forms-wrap">
+            <div class="auth-forms-slider" id="forms-slider">
+
+                <div class="auth-form" id="form-login">
+                    <div class="auth-field">
+                        <label class="auth-label" for="login-email">Email</label>
+                        <input class="auth-input" id="login-email" type="email" placeholder="you@example.com" autocomplete="email">
+                    </div>
+                    <div class="auth-field">
+                        <label class="auth-label" for="login-pass">Password</label>
+                        <input class="auth-input" id="login-pass" type="password" placeholder="••••••••" autocomplete="current-password">
+                    </div>
+                    <div class="auth-error" id="login-error"></div>
+                    <button class="auth-submit" id="btn-login">Log In</button>
+                    <div class="auth-divider"><span>or</span></div>
+                    <button class="auth-guest" id="btn-guest">Continue as Guest</button>
+                </div>
+
+                <div class="auth-form" id="form-register">
+                    <div class="auth-field">
+                        <label class="auth-label" for="reg-name">Full Name</label>
+                        <input class="auth-input" id="reg-name" type="text" placeholder="John Doe" autocomplete="name">
+                    </div>
+                    <div class="auth-field">
+                        <label class="auth-label" for="reg-email">Email</label>
+                        <input class="auth-input" id="reg-email" type="email" placeholder="you@example.com" autocomplete="email">
+                    </div>
+                    <div class="auth-field">
+                        <label class="auth-label" for="reg-pass">Password</label>
+                        <input class="auth-input" id="reg-pass" type="password" placeholder="Min. 6 characters" autocomplete="new-password">
+                    </div>
+                    <div class="auth-field">
+                        <label class="auth-label" for="reg-pass2">Confirm Password</label>
+                        <input class="auth-input" id="reg-pass2" type="password" placeholder="Repeat password" autocomplete="new-password">
+                    </div>
+                    <div class="auth-error" id="reg-error"></div>
+                    <button class="auth-submit" id="btn-register">Create Account</button>
+                </div>
+
+            </div>
+        </div>
+
+        <p class="auth-footer">Your data stays on this device. No server required.</p>
+    </div>
+
+    <script>
+    (function () {
+        var LS_USER  = 'stuffsus_user';
+        var LS_THEME = 'stuffsus_theme';
+
+        /* ── Theme ──────────────────────────────── */
+        var isDark    = localStorage.getItem(LS_THEME) === 'dark';
+        var themeBtn  = document.getElementById('theme-btn');
+        var themeIcon = document.getElementById('theme-icon');
+        var sunSVG    = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+        var moonSVG   = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+
+        function applyTheme(dark) {
+            dark ? document.documentElement.setAttribute('data-theme','dark')
+                 : document.documentElement.removeAttribute('data-theme');
+            themeIcon.innerHTML = dark ? sunSVG : moonSVG;
+        }
+        applyTheme(isDark);
+
+        themeBtn.addEventListener('click', function () {
+            isDark = !isDark;
+            applyTheme(isDark);
+            localStorage.setItem(LS_THEME, isDark ? 'dark' : 'light');
+        });
+
+        /* ── Already logged in? ─────────────────── */
+        try {
+            var ex = JSON.parse(localStorage.getItem(LS_USER));
+            if (ex && ex.name) { window.location.replace('index.html'); return; }
+        } catch(e) {}
+
+        /* ── Tab switching ──────────────────────── */
+        var tabLogin    = document.getElementById('tab-login');
+        var tabRegister = document.getElementById('tab-register');
+        var indicator   = document.getElementById('tab-indicator');
+        var slider      = document.getElementById('forms-slider');
+
+        function switchTab(toReg) {
+            tabLogin.classList.toggle('auth-tab--active', !toReg);
+            tabRegister.classList.toggle('auth-tab--active', toReg);
+            indicator.classList.toggle('auth-tab-indicator--reg', toReg);
+            slider.classList.toggle('auth-forms-slider--reg', toReg);
+            clearErrors();
+        }
+
+        tabLogin.addEventListener('click',    function () { switchTab(false); });
+        tabRegister.addEventListener('click', function () { switchTab(true);  });
+
+        /* ── Helpers ────────────────────────────── */
+        function showError(id, msg) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            el.textContent = msg;
+            el.classList.add('auth-error--show');
+        }
+        function clearErrors() {
+            ['login-error','reg-error'].forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) { el.textContent = ''; el.classList.remove('auth-error--show'); }
+            });
+        }
+        function getUsers() {
+            try { return JSON.parse(localStorage.getItem('stuffsus_users')) || {}; } catch(e) { return {}; }
+        }
+        function saveUsers(u) { localStorage.setItem('stuffsus_users', JSON.stringify(u)); }
+        function loginSuccess(name, email) {
+            localStorage.setItem(LS_USER, JSON.stringify({ name: name, email: email }));
+            window.location.replace('index.html');
+        }
+
+        /* ── Login ──────────────────────────────── */
+        document.getElementById('btn-login').addEventListener('click', function () {
+            clearErrors();
+            var email = document.getElementById('login-email').value.trim().toLowerCase();
+            var pass  = document.getElementById('login-pass').value;
+            if (!email || !pass) { showError('login-error','Please fill all fields.'); return; }
+            var users = getUsers();
+            if (!users[email]) { showError('login-error','No account found with that email.'); return; }
+            if (users[email].password !== btoa(pass)) { showError('login-error','Incorrect password.'); return; }
+            loginSuccess(users[email].name, email);
+        });
+
+        document.getElementById('login-pass').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') document.getElementById('btn-login').click();
+        });
+
+        /* ── Register ───────────────────────────── */
+        document.getElementById('btn-register').addEventListener('click', function () {
+            clearErrors();
+            var name  = document.getElementById('reg-name').value.trim();
+            var email = document.getElementById('reg-email').value.trim().toLowerCase();
+            var pass  = document.getElementById('reg-pass').value;
+            var pass2 = document.getElementById('reg-pass2').value;
+            if (!name||!email||!pass||!pass2) { showError('reg-error','Please fill all fields.'); return; }
+            if (pass.length < 6)  { showError('reg-error','Password must be at least 6 characters.'); return; }
+            if (pass !== pass2)   { showError('reg-error','Passwords do not match.'); return; }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('reg-error','Enter a valid email.'); return; }
+            var users = getUsers();
+            if (users[email]) { showError('reg-error','An account with that email already exists.'); return; }
+            users[email] = { name: name, password: btoa(pass) };
+            saveUsers(users);
+            loginSuccess(name, email);
+        });
+
+        document.getElementById('reg-pass2').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') document.getElementById('btn-register').click();
+        });
+
+        /* ── Guest ──────────────────────────────── */
+        document.getElementById('btn-guest').addEventListener('click', function () {
+            loginSuccess('Guest', '');
+        });
+
+    })();
+    </script>
+</body>
+</html>

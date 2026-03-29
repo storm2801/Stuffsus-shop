@@ -20,7 +20,7 @@
             <div class="header__tool-list">
                 <a href="#" id="nav-search-btn"><img src="img/search.svg" class="header__tool-icon"></a>
                 <a href="#" id="nav-cart-btn" class="header__cart-btn"><img src="img/carshoping.svg" class="header__tool-icon"><span class="header__cart-badge" id="cart-badge">0</span></a>
-                <a href="#"><img src="img/user.svg" class="header__tool-icon"></a>
+                <a href="#" id="nav-user-btn" class="header__user-btn"><img src="img/user.svg" class="header__tool-icon header__user-icon-img" id="nav-user-icon"><span class="header__user-initial" id="nav-user-initial"></span></a>
             </div>
             <label for="sidebar-toggle" class="header__menu-btn" aria-label="Open menu">
                 <img src="img/menu.svg">
@@ -63,7 +63,7 @@
                 <img src="img/carshoping.svg" class="sidebar__action-icon"> Cart
             </a>
             <a href="#" class="sidebar__action-link">
-                <img src="img/user.svg" class="sidebar__action-icon"> Account
+                <img src="img/user.svg" class="sidebar__action-icon" id="sidebar-user-icon"> Account
             </a>
         </div>
     </aside>
@@ -98,6 +98,10 @@
                             <i></i><img src="img/unlock.svg" class="shop__item-icon"></i>
                             <a href="">For Segurity</a>
                         </li>
+                        <li class="shop__category-item">
+                            <i></i><img src="img/game.svg" class="shop__item-icon"></i>
+                            <a href="">For Games</a>
+                        </li>
                     </ul>
                 </details>
                 <details class="shop__details">
@@ -114,11 +118,11 @@
                         </li>
                         <li class="shop__category-item">
                             <i></i><img src="img/bolt.svg" class="shop__item-icon"></i>
-                            <a href="">Earphone</a>
+                            <a href="">Guiteras</a>
                         </li>
                         <li class="shop__category-item">
-                            <i></i><img src="img/music.svg" class="shop__item-icon"></i>
-                            <a href="">Musical</a>
+                            <i></i><img src="img/gem.svg" class="shop__item-icon"></i>
+                            <a href="">Bodega</a>
                         </li>
                         <li class="shop__category-item">
                             <i></i><img src="img/unlock.svg" class="shop__item-icon"></i>
@@ -130,13 +134,13 @@
                 <div class="shop__content">
                     <div class="shop__grid-products">
                         <div data-page="1" class="pager__page--visible">
-                    <div class="shop__card" data-id="1" data-name="Phone Holder Sakti" data-price="29.90" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Other">
+                    <div class="shop__card" data-id="1" data-name="Amazon ECHO POP" data-price="29.90" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Home">
                         <div class="card__image-wrap">
-                            <span class="card__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Phone Holder Sakti" class="card__image">
+                            <span class="card__badge">Home</span>
+                            <img src="img/product1.png" alt="Amazon ECHO POP" class="card__image">
                         </div>
                         <div class="card__info">
-                            <h3 class="card__title">Phone Holder Sakti</h3>
+                            <h3 class="card__title">Amazon ECHO POP</h3>
                             <div class="card__meta">
                                 <div class="card__rating">
                                     <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -155,13 +159,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="2" data-name="Headsound Pro" data-price="12.00" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Music">
+                    <div class="shop__card" data-id="2" data-name="GXALSSY X3" data-price="12.00" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Music">
                         <div class="card__image-wrap">
                             <span class="card__badge">Music</span>
-                            <img src="img/tu-producto.png" alt="Headsound Pro" class="card__image">
+                            <img src="img/product2.png" alt="GXALSSY X3" class="card__image">
                         </div>
                         <div class="card__info">
-                            <h3 class="card__title">Headsound Pro</h3>
+                            <h3 class="card__title">GXALSSY X3</h3>
                             <div class="card__meta">
                                 <div class="card__rating">
                                     <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -180,13 +184,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="3" data-name="Adudu Cleaner" data-price="29.90" data-rating="4.4" data-reviews="1k Reviews" data-category="Other">
+                    <div class="shop__card" data-id="3" data-name="Samsung VR7MD" data-price="29.90" data-rating="4.4" data-reviews="1k Reviews" data-category="Home">
                         <div class="card__image-wrap">
-                            <span class="card__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Adudu Cleaner" class="card__image">
+                            <span class="card__badge">Home</span>
+                            <img src="img/product3.png" alt="Samsung VR7MD" class="card__image">
                         </div>
                         <div class="card__info">
-                            <h3 class="card__title">Adudu Cleaner</h3>
+                            <h3 class="card__title">Samsung VR7MD</h3>
                             <div class="card__meta">
                                 <div class="card__rating">
                                     <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -205,13 +209,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="4" data-name="CCTV Maling" data-price="50.00" data-rating="4.8" data-reviews="120 Reviews" data-category="Home">
+                    <div class="shop__card" data-id="4" data-name="Touch True X3" data-price="50.00" data-rating="4.8" data-reviews="120 Reviews" data-category="Music">
                         <div class="card__image-wrap">
-                            <span class="card__badge">Home</span>
-                            <img src="img/tu-producto.png" alt="CCTV Maling" class="card__image">
+                            <span class="card__badge">Music</span>
+                            <img src="img/product4.png" alt="Touch True X3" class="card__image">
                         </div>
                         <div class="card__info">
-                            <h3 class="card__title">CCTV Maling</h3>
+                            <h3 class="card__title">Touch True X3</h3>
                             <div class="card__meta">
                                 <div class="card__rating">
                                     <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -230,13 +234,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="5" data-name="Stuffus Peker 32" data-price="9.90" data-rating="5.0" data-reviews="1.3k Reviews" data-category="Other">
+                    <div class="shop__card" data-id="5" data-name="Meta Quest 3S Advanced" data-price="9.90" data-rating="5.0" data-reviews="1.3k Reviews" data-category="Games">
                         <div class="card__image-wrap">
-                            <span class="card__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="Stuffus Peker 32" class="card__image">
+                            <span class="card__badge">Games</span>
+                            <img src="img/product5.png" alt="Meta Quest 3S Advanced" class="card__image">
                         </div>
                         <div class="card__info">
-                            <h3 class="card__title">Stuffus Peker 32</h3>
+                            <h3 class="card__title">Meta Quest 3S Advanced</h3>
                             <div class="card__meta">
                                 <div class="card__rating">
                                     <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -255,13 +259,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="6" data-name="Stuffus R175" data-price="34.10" data-rating="4.8" data-reviews="2.4k Reviews" data-category="Music">
+                    <div class="shop__card" data-id="6" data-name="IMOU Cruiser 2" data-price="34.10" data-rating="4.8" data-reviews="2.4k Reviews" data-category="Segurity">
                         <div class="card__image-wrap">
-                            <span class="card__badge">Music</span>
-                            <img src="img/tu-producto.png" alt="Stuffus R175" class="card__image">
+                            <span class="card__badge">Segurity</span>
+                            <img src="img/product6.png" alt="IMOU Cruiser 2" class="card__image">
                         </div>
                         <div class="card__info">
-                            <h3 class="card__title">Stuffus R175</h3>
+                            <h3 class="card__title">IMOU Cruiser 2</h3>
                             <div class="card__meta">
                                 <div class="card__rating">
                                     <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -280,13 +284,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="7" data-name="Smart Plug X" data-price="19.90" data-rating="4.6" data-reviews="890 Reviews" data-category="Home">
+                    <div class="shop__card" data-id="7" data-name="USB C Fast Charger" data-price="19.90" data-rating="4.6" data-reviews="890 Reviews" data-category="Phone">
                         <div class="card__image-wrap">
-                            <span class="card__badge">Home</span>
-                            <img src="img/tu-producto.png" alt="Smart Plug X" class="card__image">
+                            <span class="card__badge">Phone</span>
+                            <img src="img/product7.png" alt="USB C Fast Charger" class="card__image">
                         </div>
                         <div class="card__info">
-                            <h3 class="card__title">Smart Plug X</h3>
+                            <h3 class="card__title">USB C Fast Charger</h3>
                             <div class="card__meta">
                                 <div class="card__rating">
                                     <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -305,13 +309,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="8" data-name="BT Speaker Mini" data-price="45.00" data-rating="4.7" data-reviews="540 Reviews" data-category="Music">
+                    <div class="shop__card" data-id="8" data-name="Touch True" data-price="45.00" data-rating="4.7" data-reviews="540 Reviews" data-category="Music">
                         <div class="card__image-wrap">
                             <span class="card__badge">Music</span>
-                            <img src="img/tu-producto.png" alt="BT Speaker Mini" class="card__image">
+                            <img src="img/product8.png" alt="Touch True" class="card__image">
                         </div>
                         <div class="card__info">
-                            <h3 class="card__title">BT Speaker Mini</h3>
+                            <h3 class="card__title">Touch True</h3>
                             <div class="card__meta">
                                 <div class="card__rating">
                                     <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -330,13 +334,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shop__card" data-id="9" data-name="USB Hub 7-in-1" data-price="38.50" data-rating="4.9" data-reviews="2.1k Reviews" data-category="Other">
+                    <div class="shop__card" data-id="9" data-name="Redroad R10" data-price="38.50" data-rating="4.9" data-reviews="2.1k Reviews" data-category="Home">
                         <div class="card__image-wrap">
-                            <span class="card__badge">Other</span>
-                            <img src="img/tu-producto.png" alt="USB Hub 7-in-1" class="card__image">
+                            <span class="card__badge">Home</span>
+                            <img src="img/product9.png" alt="Redroad R10" class="card__image">
                         </div>
                         <div class="card__info">
-                            <h3 class="card__title">USB Hub 7-in-1</h3>
+                            <h3 class="card__title">Redroad R10</h3>
                             <div class="card__meta">
                                 <div class="card__rating">
                                     <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -839,13 +843,13 @@
                 </div>
             </div>
             <div class="explore__slider">
-                <div class="explore__card shop__card" data-id="28" data-name="TWS Bujug" data-price="29.90" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Other">
+                <div class="explore__card shop__card" data-id="28" data-name="Asus RT-AC86U" data-price="29.90" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Home">
                     <div class="card__image-wrap">
-                        <span class="card__badge">Other</span>
-                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                        <span class="card__badge">Home</span>
+                        <img src="img/product10.png" alt="Asus RT-AC86U" class="card__image">
                     </div>
                     <div class="card__info">
-                        <h3 class="card__title">TWS Bujug</h3>
+                        <h3 class="card__title">Asus RT-AC86U</h3>
                         <div class="card__meta">
                             <div class="card__rating">
                                 <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -864,13 +868,13 @@
                             </div>
                     </div>
                 </div>
-                <div class="explore__card shop__card" data-id="29" data-name="Headsound Baptis" data-price="12.00" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Music">
+                <div class="explore__card shop__card" data-id="29" data-name="PlayStation DualSense" data-price="12.00" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Games">
                     <div class="card__image-wrap">
-                        <span class="card__badge">Music</span>
-                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                        <span class="card__badge">Games</span>
+                        <img src="img/product11.png" alt="PlayStation DualSense" class="card__image">
                     </div>
                     <div class="card__info">
-                        <h3 class="card__title">Headsound Baptis</h3>
+                        <h3 class="card__title">PlayStation DualSense</h3>
                         <div class="card__meta">
                             <div class="card__rating">
                                 <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -889,13 +893,13 @@
                             </div>
                     </div>
                 </div>
-                <div class="explore__card shop__card" data-id="30" data-name="Adudu Cleaner" data-price="29.90" data-rating="4.4" data-reviews="1k Reviews" data-category="Music">
+                <div class="explore__card shop__card" data-id="30" data-name="GXT 265" data-price="29.90" data-rating="4.4" data-reviews="1k Reviews" data-category="Music">
                     <div class="card__image-wrap">
                         <span class="card__badge">Music</span>
-                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                        <img src="img/product12.png" alt="GXT 265" class="card__image">
                     </div>
                     <div class="card__info">
-                        <h3 class="card__title">Adudu Cleaner</h3>
+                        <h3 class="card__title">GXT 265</h3>
                         <div class="card__meta">
                             <div class="card__rating">
                                 <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -914,13 +918,13 @@
                             </div>
                     </div>
                 </div>
-                <div class="explore__card shop__card" data-id="31" data-name="Phone Holder Sakti" data-price="29.90" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Other">
+                <div class="explore__card shop__card" data-id="31" data-name="Dome Camera XV4" data-price="29.90" data-rating="5.0" data-reviews="1.2k Reviews" data-category="Segurity">
                     <div class="card__image-wrap">
-                        <span class="card__badge">Other</span>
-                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                        <span class="card__badge">Segurity</span>
+                        <img src="img/product13.png" alt="Dome Camera XV4" class="card__image">
                     </div>
                     <div class="card__info">
-                        <h3 class="card__title">Phone Holder Sakti</h3>
+                        <h3 class="card__title">Dome Camera XV4</h3>
                         <div class="card__meta">
                             <div class="card__rating">
                                 <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -939,13 +943,13 @@
                             </div>
                     </div>
                 </div>
-                <div class="explore__card shop__card" data-id="32" data-name="CCTV Maling" data-price="50.00" data-rating="4.8" data-reviews="120 Reviews" data-category="Home">
+                <div class="explore__card shop__card" data-id="32" data-name="Dome Camera" data-price="50.00" data-rating="4.8" data-reviews="120 Reviews" data-category="Segurity">
                     <div class="card__image-wrap">
-                        <span class="card__badge">Home</span>
-                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                        <span class="card__badge">Segurity</span>
+                        <img src="img/product14.png" alt="Dome Camera" class="card__image">
                     </div>
                     <div class="card__info">
-                        <h3 class="card__title">CCTV Maling</h3>
+                        <h3 class="card__title">Dome Camera</h3>
                         <div class="card__meta">
                             <div class="card__rating">
                                 <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -964,13 +968,13 @@
                             </div>
                     </div>
                 </div>
-                <div class="explore__card shop__card" data-id="33" data-name="Stuffus R175" data-price="34.10" data-rating="4.8" data-reviews="2.4k Reviews" data-category="Music">
+                <div class="explore__card shop__card" data-id="33" data-name="T27 Wireless" data-price="34.10" data-rating="4.8" data-reviews="2.4k Reviews" data-category="Music">
                     <div class="card__image-wrap">
                         <span class="card__badge">Music</span>
-                        <img src="img/tu-producto.png" alt="Producto" class="card__image">
+                        <img src="img/product15.png" alt="T27 Wireless" class="card__image">
                     </div>
                     <div class="card__info">
-                        <h3 class="card__title">Stuffus R175</h3>
+                        <h3 class="card__title">T27 Wireless</h3>
                         <div class="card__meta">
                             <div class="card__rating">
                                 <img src="img/star.svg" alt="Star" class="card__star-icon">
@@ -1036,17 +1040,17 @@
             <div class="footer__col footer__col--right">
                 <h4 class="footer__heading">Social Media</h4>
                 <div class="footer__social-list">
-                    <a href="#" class="footer__social-btn" aria-label="X / Twitter">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    <a href="#" class="footer__social-btn">
+                        <img src="img/x.png" class="footer__social-btn-img">
                     </a>
-                    <a href="#" class="footer__social-btn" aria-label="Facebook">
-                        <img src="img/" alt="">
+                    <a href="#" class="footer__social-btn">
+                        <img src="img/facebook.png" class="footer__social-btn-img">
                     </a>
-                    <a href="#" class="footer__social-btn" aria-label="LinkedIn">
-                        <img src="img/" alt="">
+                    <a href="#" class="footer__social-btn">
+                        <img src="img/discord.png" class="footer__social-btn-img">
                     </a>
-                    <a href="#" class="footer__social-btn" aria-label="Instagram">
-                        <img src="img/" alt="">
+                    <a href="#" class="footer__social-btn">
+                        <img src="img/ig.png" class="footer__social-btn-img">
                     </a>
                 </div>
             </div>
@@ -1085,6 +1089,128 @@
     
 
 
+    <div class="user-panel" id="user-panel">
+        <div class="user-panel__backdrop" id="user-backdrop"></div>
+        <div class="user-panel__drawer">
+            <div class="user-panel__topbar">
+                <h2 class="user-panel__heading">My Account</h2>
+                <button class="user-panel__close" id="user-close">
+                    <img src="img/close.svg" class="user-panel__close-icon">
+                </button>
+            </div>
+            <div class="user-panel__body">
+                <div class="user-panel__profile">
+                    <div class="user-panel__avatar-wrap">
+                        <div class="user-panel__avatar" id="user-avatar-display">?</div>
+                        <div class="user-panel__avatar-ring"></div>
+                    </div>
+                    <div class="user-panel__name-wrap">
+                        <span class="user-panel__name" id="user-name-display">User</span>
+                        <button class="user-panel__edit-btn" id="user-edit-btn">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                            Edit
+                        </button>
+                    </div>
+                    <span class="user-panel__email" id="user-email-display"></span>
+                    <div class="user-panel__name-edit" id="user-name-edit">
+                        <input class="user-panel__name-input" id="user-name-input" type="text" placeholder="Your name" maxlength="24">
+                        <button class="user-panel__save-btn" id="user-save-btn">Save</button>
+                    </div>
+                </div>
+
+                <div class="user-panel__divider"></div>
+
+                <div class="user-panel__row user-panel__row--toggle" id="theme-row">
+                    <div class="user-panel__row-left">
+                        <div class="user-panel__row-icon">
+                            <svg id="theme-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                        </div>
+                        <div>
+                            <span class="user-panel__row-label" id="theme-label">Dark Mode</span>
+                            <span class="user-panel__row-sub">Switch appearance</span>
+                        </div>
+                    </div>
+                    <div class="user-panel__toggle" id="theme-toggle">
+                        <div class="user-panel__toggle-thumb"></div>
+                    </div>
+                </div>
+
+                <div class="user-panel__divider"></div>
+                <div class="user-panel__section-title">Session Stats</div>
+                <div class="user-panel__stats">
+                    <div class="user-panel__stat">
+                        <span class="user-panel__stat-num" id="stat-viewed">0</span>
+                        <span class="user-panel__stat-label">Viewed</span>
+                    </div>
+                    <div class="user-panel__stat">
+                        <span class="user-panel__stat-num" id="stat-cart">0</span>
+                        <span class="user-panel__stat-label">In Cart</span>
+                    </div>
+                    <div class="user-panel__stat">
+                        <span class="user-panel__stat-num" id="stat-spent">$0</span>
+                        <span class="user-panel__stat-label">Cart Value</span>
+                    </div>
+                </div>
+
+                <div class="user-panel__divider"></div>
+                <div class="user-panel__section-title">Preferences</div>
+
+                <div class="user-panel__pref-grid">
+                    <div class="user-panel__pref-card" id="pref-lang-card">
+                        <div class="user-panel__pref-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <span class="user-panel__pref-label">Language</span>
+                        <span class="user-panel__pref-value" id="lang-display">English</span>
+                        <svg class="user-panel__pref-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                    <div class="user-panel__pref-card" id="pref-curr-card">
+                        <div class="user-panel__pref-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <span class="user-panel__pref-label">Currency</span>
+                        <span class="user-panel__pref-value" id="curr-display">USD $</span>
+                        <svg class="user-panel__pref-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                    </div>
+                </div>
+
+                <div class="user-panel__picker" id="lang-picker">
+                    <div class="user-panel__picker-title">Select Language</div>
+                    <div class="user-panel__picker-opts">
+                        <button class="user-panel__picker-btn" data-lang="en" data-label="English">🇺🇸 English</button>
+                        <button class="user-panel__picker-btn" data-lang="es" data-label="Español">🇪🇸 Español</button>
+                        <button class="user-panel__picker-btn" data-lang="fr" data-label="Français">🇫🇷 Français</button>
+                        <button class="user-panel__picker-btn" data-lang="de" data-label="Deutsch">🇩🇪 Deutsch</button>
+                        <button class="user-panel__picker-btn" data-lang="pt" data-label="Português">🇧🇷 Português</button>
+                        <button class="user-panel__picker-btn" data-lang="ja" data-label="日本語">🇯🇵 日本語</button>
+                    </div>
+                </div>
+
+                <div class="user-panel__picker" id="curr-picker">
+                    <div class="user-panel__picker-title">Select Currency</div>
+                    <div class="user-panel__picker-opts">
+                        <button class="user-panel__picker-btn" data-curr="USD" data-sym="$" data-rate="1">🇺🇸 USD — Dollar</button>
+                        <button class="user-panel__picker-btn" data-curr="EUR" data-sym="€" data-rate="0.92">🇪🇺 EUR — Euro</button>
+                        <button class="user-panel__picker-btn" data-curr="GBP" data-sym="£" data-rate="0.79">🇬🇧 GBP — Pound</button>
+                        <button class="user-panel__picker-btn" data-curr="JPY" data-sym="¥" data-rate="149">🇯🇵 JPY — Yen</button>
+                        <button class="user-panel__picker-btn" data-curr="CAD" data-sym="C$" data-rate="1.36">🇨🇦 CAD — Dollar</button>
+                        <button class="user-panel__picker-btn" data-curr="AUD" data-sym="A$" data-rate="1.52">🇦🇺 AUD — Dollar</button>
+                    </div>
+                </div>
+
+                <div class="user-panel__divider"></div>
+                <div class="user-panel__section-title">Last Visit</div>
+                <div class="user-panel__last-visit" id="last-visit">First time here!</div>
+
+                <div class="user-panel__divider"></div>
+                <button class="user-panel__logout-btn" id="user-logout-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    Log out
+                </button>
+            </div>
+        </div>
+    </div>
+
     <div class="product-detail" id="product-detail">
         <div class="product-detail__backdrop" id="pd-backdrop"></div>
         <div class="product-detail__panel">
@@ -1118,7 +1244,7 @@
                         <span class="product-detail__price" id="pd-price"></span>
                         <span class="product-detail__stock">In Stock</span>
                     </div>
-                    <p class="product-detail__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula justo a urna fringilla, non tincidunt arcu tincidunt. Designed for everyday use with premium materials and an ergonomic form factor.</p>
+                    <p class="product-detail__desc" id="pd-desc"></p>
                     <ul class="product-detail__specs">
                         <li><span>Brand</span><strong>Stuffsus</strong></li>
                         <li><span>Category</span><strong id="pd-spec-cat"></strong></li>
@@ -1262,14 +1388,16 @@
 
     <script>
     /* ═══════════════════════════════════════════════
-       CART SYSTEM
+        CART SYSTEM
     ═══════════════════════════════════════════════ */
     (function () {
         'use strict';
 
-        // ── State ──────────────────────────────────
-        // cart = { [productId]: { name, price, qty, img } }
-        const cart = {};
+        // ── State — persistent via localStorage ──────
+        const LS_CART = 'stuffsus_cart';
+        let cart = {};
+        try { cart = JSON.parse(localStorage.getItem(LS_CART)) || {}; } catch(e) {}
+        function saveCart() { localStorage.setItem(LS_CART, JSON.stringify(cart)); }
 
         // ── DOM refs ───────────────────────────────
         const drawer    = document.getElementById('cart-drawer');
@@ -1372,6 +1500,7 @@
             if (e.target.closest('.cart-item__remove')) {
                 const pid = e.target.closest('.cart-item__remove').dataset.pid;
                 delete cart[pid];
+                saveCart();
                 renderCart();
                 return;
             }
@@ -1385,6 +1514,7 @@
             } else {
                 cart[id] = { name, price, qty, img: src };
             }
+            saveCart();
             renderCart();
             flashBadge();
         }
@@ -1393,6 +1523,7 @@
             if (!cart[pid]) return;
             cart[pid].qty += delta;
             if (cart[pid].qty <= 0) delete cart[pid];
+            saveCart();
             renderCart();
         }
 
@@ -1431,7 +1562,7 @@
                         <button class="cart-item__ctrl-btn cart-item__ctrl-btn--plus" data-pid="${pid}">+</button>
                     </div>
                     <span class="cart-item__subtotal">$${sub.toFixed(2)}</span>
-                    <button class="cart-item__remove" data-pid="${pid}" title="Remove"><img src="img/TU-ICONO.svg" class="cart-item__remove-icon" alt="Remove"></button>
+                    <button class="cart-item__remove" data-pid="${pid}" title="Remove"><img src="img/trash.svg" class="cart-item__remove-icon" alt="Remove"></button>
                 </div>`;
             });
 
@@ -1483,7 +1614,44 @@
         var pdQty     = 1;
         var starCount = 0;
 
+        var descriptions = {
+            "Amazon ECHO POP": "Smart speaker with Alexa built-in. Rich, full sound in a compact half-sphere design. Control your smart home, play music and set timers hands-free.",
+            "GXALSSY X3": "True wireless earbuds with hybrid active noise cancellation. 30-hour total battery with charging case. IPX5 water resistance for workouts and commutes.",
+            "Samsung VR7MD": "Robot vacuum with 2700Pa suction, LiDAR mapping and automatic carpet boost. Schedules cleaning routes and empties its own dustbin.",
+            "Touch True X3": "Premium true wireless earbuds with spatial audio, transparency mode and custom EQ via app. 3 ear tip sizes for a perfect comfortable seal.",
+            "Meta Quest 3S Advanced": "Mixed reality headset with breakthrough Meta Reality technology. Play games, explore virtual worlds with crisp visuals and intuitive Touch controllers.",
+            "IMOU Cruiser 2": "Outdoor WiFi security camera with 2K resolution, color night vision and built-in siren. AI-powered human detection reduces false alarms.",
+            "USB C Fast Charger": "65W GaN USB-C fast charger for laptops, phones and tablets. Charges a MacBook from 0 to 50% in under 30 minutes. Travel-friendly compact design.",
+            "Touch True": "True wireless earbuds with touch controls and 6-hour playtime per charge. Compact charging case provides 3 extra charges. Crystal-clear call quality.",
+            "Redroad R10": "Wireless sports earbuds with ear hooks for a secure fit during workouts. IPX7 waterproof, 8-hour playtime and fast 15-minute charge.",
+            "Ring Light 12in": "12-inch LED ring light with adjustable color temperature (3200K–5500K) and 10 brightness levels. Includes tripod stand and phone holder.",
+            "Desk Organizer": "Premium bamboo desk organizer with 5 compartments. Keeps your workspace tidy. Eco-friendly natural finish complements any office aesthetic.",
+            "Wireless Charger": "10W Qi wireless charger with fast charging for iPhone and Android. LED indicator shows status. Slim non-slip pad design.",
+            "Keyboard Cover": "Ultra-thin silicone keyboard cover with dust and spill protection. Fits precisely without affecting typing feel. Washable and reusable.",
+            "Noise Cancel Ear": "Over-ear headphones with industry-leading active noise cancellation. 30-hour battery, premium 40mm drivers and foldable travel design.",
+            "LED Strip 5m": "Smart RGB LED strip 5 meters long with app control and music sync. 16 million colors, adhesive backing for under cabinets or desks.",
+            "Laptop Stand Pro": "Ergonomic aluminum laptop stand with 6 adjustable height levels. Improves posture and reduces neck strain. Fits 10–17 inch laptops.",
+            "Cam Lens 0.6x": "Wide-angle clip-on lens for smartphones. 0.6x magnification expands field of view by 40%. Compatible with most phone models.",
+            "Air Purifier Mini": "Compact air purifier with HEPA filtration removing 99.97% of dust and allergens. Ultra-quiet operation perfect for bedrooms and home offices.",
+            "Foldable Keyboard": "Ultra-slim foldable Bluetooth keyboard for iOS, Android and Windows. Full-size layout folds to pocket size. 90-day battery life.",
+            "Security Lock 2x": "Heavy-duty combination security lock with hardened steel shackle. 4-digit resettable code, corrosion-resistant for outdoor use.",
+            "Car Phone Mount": "Universal magnetic car mount with 360° rotation. Strong suction base holds on any dashboard. One-hand operation for safe driving.",
+            "Portable SSD 1TB": "USB-C portable SSD with 1TB capacity and read speeds up to 1050 MB/s. Shock-resistant compact aluminum body fits in any pocket.",
+            "Vinyl Turntable": "Belt-drive vinyl turntable with built-in preamp and USB output for digitizing records. Includes Audio-Technica stylus.",
+            "Smart Door Bell": "WiFi video doorbell with 1080p HD camera, motion detection and two-way talk. See visitors from anywhere via smartphone app.",
+            "Clip-on Mic": "Professional cardioid clip-on microphone for content creators. Clear capture with built-in noise reduction. Compatible with phones and cameras.",
+            "Screen Protector": "Tempered glass screen protector with 9H hardness rating. Oleophobic coating resists fingerprints. Precise cut for edge-to-edge coverage.",
+            "RGB Mouse Pad XL": "Extra-large RGB gaming mouse pad 900×400mm. 14 lighting modes, non-slip rubber base and smooth micro-textured surface.",
+            "Asus RT-AC86U": "Dual-band WiFi router with MU-MIMO delivering speeds up to 2917 Mbps. Adaptive QoS and AiProtection keep your network fast and secure.",
+            "PlayStation DualSense": "Next-gen wireless controller with haptic feedback and adaptive triggers. Feel the tension of a bowstring or rumble of a car in your hands.",
+            "GXT 265": "Full-size mechanical gaming keyboard with RGB backlighting and tactile blue switches. Anti-ghosting with 26-key rollover. Durable aluminum top plate.",
+            "Dome Camera XV4": "Advanced outdoor dome camera with 4K resolution, IP67 weatherproof and color night vision. Smart motion zones reduce false alerts.",
+            "Dome Camera": "Indoor HD dome camera with 1080p resolution and 360° pan. Night vision up to 10m, motion detection alerts and two-way audio.",
+            "T27 Wireless": "Wireless gaming mouse with 16000 DPI sensor, 6 programmable buttons and 70-hour battery life. Lightweight 95g design for marathon sessions.",
+        };
+
         function openDetail(card) {
+            if (panel.classList.contains('product-detail--open')) return;
             activeCid    = card.dataset.id;
             pdQty        = 1;
             var name     = card.dataset.name     || '';
@@ -1504,20 +1672,26 @@
             document.getElementById('pd-main-img').src         = imgSrc;
             document.getElementById('pd-main-img').alt         = name;
             document.getElementById('pd-qty').textContent      = '1';
+            var descEl = document.getElementById('pd-desc');
+            if (descEl) descEl.textContent = descriptions[name] || 'Premium quality product from Stuffsus. Designed for everyday use with durable materials and thoughtful ergonomics.';
 
             renderStars(parseFloat(rating));
+            panel.querySelectorAll('.product-detail__thumb img').forEach(function(img) { img.src = imgSrc; });
 
-            panel.querySelectorAll('.product-detail__thumb img').forEach(function(img) {
-                img.src = imgSrc;
-            });
-
-            panel.classList.add('product-detail--open');
+            var sw = window.innerWidth - document.documentElement.clientWidth;
+            document.body.style.paddingRight = sw + 'px';
             document.body.style.overflow = 'hidden';
+            panel.classList.add('product-detail--open');
         }
 
         function closeDetail() {
-            panel.classList.remove('product-detail--open');
-            document.body.style.overflow = '';
+            panel.classList.add('product-detail--closing');
+            setTimeout(function() {
+                panel.classList.remove('product-detail--open');
+                panel.classList.remove('product-detail--closing');
+                document.body.style.paddingRight = '';
+                document.body.style.overflow = '';
+            }, 340);
         }
 
         function renderStars(rating) {
@@ -1602,6 +1776,272 @@
         });
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeDetail();
+        });
+
+    })();
+    </script>
+
+    <script>
+    (function () {
+        var LS_USER    = 'stuffsus_user';
+        var LS_THEME   = 'stuffsus_theme';
+        var LS_LANG    = 'stuffsus_lang';
+        var LS_CURR    = 'stuffsus_currency';
+        var LS_VISITED = 'stuffsus_last_visit';
+
+        /* ── Auth guard ─────────────────────────── */
+        var userData = null;
+        try { userData = JSON.parse(localStorage.getItem(LS_USER)); } catch(e) {}
+        if (!userData || !userData.name) { window.location.replace('login.html'); return; }
+
+        /* ── Apply theme before render ──────────── */
+        var savedTheme = localStorage.getItem(LS_THEME);
+        if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme','dark');
+
+        /* ── Currency rates ─────────────────────── */
+        var CURRENCIES = {
+            USD: { sym:'$',   rate:1      },
+            EUR: { sym:'€',   rate:0.92   },
+            GBP: { sym:'£',   rate:0.79   },
+            JPY: { sym:'¥',   rate:149    },
+            CAD: { sym:'C$',  rate:1.36   },
+            AUD: { sym:'A$',  rate:1.52   },
+        };
+        var LANG_MAP = {
+            en: { addToCart:'Add to Cart',      buyNow:'Buy Now',      search:'Search on Stuffsus'     },
+            es: { addToCart:'Añadir al Carrito', buyNow:'Comprar Ahora', search:'Buscar en Stuffsus'   },
+            fr: { addToCart:'Ajouter au Panier', buyNow:'Acheter',       search:'Chercher sur Stuffsus' },
+            de: { addToCart:'In den Warenkorb',  buyNow:'Kaufen',        search:'Stuffsus durchsuchen'  },
+            pt: { addToCart:'Adicionar',         buyNow:'Comprar',       search:'Pesquisar no Stuffsus' },
+            ja: { addToCart:'カートに追加',        buyNow:'今すぐ買う',     search:'Stuffsusで検索'        },
+        };
+        var LANG_NAMES = { en:'English', es:'Español', fr:'Français', de:'Deutsch', pt:'Português', ja:'日本語' };
+
+        var currentCurr = localStorage.getItem(LS_CURR) || 'USD';
+        var currentLang = localStorage.getItem(LS_LANG) || 'en';
+
+        function formatPrice(usd) {
+            var c = CURRENCIES[currentCurr] || CURRENCIES.USD;
+            var v = usd * c.rate;
+            return currentCurr === 'JPY' ? c.sym + Math.round(v) : c.sym + v.toFixed(2);
+        }
+
+        function refreshAllPrices() {
+            document.querySelectorAll('.shop__card').forEach(function(card) {
+                var el = card.querySelector('.card__price');
+                if (el && card.dataset.price) el.textContent = formatPrice(parseFloat(card.dataset.price));
+            });
+            var cartTotal = document.getElementById('cart-total');
+            if (cartTotal && cartTotal.dataset.usd) cartTotal.textContent = formatPrice(parseFloat(cartTotal.dataset.usd));
+        }
+
+        function applyLang(code) {
+            var m = LANG_MAP[code] || LANG_MAP.en;
+            var sf = document.getElementById('main-search');
+            if (sf) sf.placeholder = m.search;
+            document.querySelectorAll('.card__add-btn').forEach(function(b){ b.textContent = m.addToCart; });
+            document.querySelectorAll('.card__buy-btn').forEach(function(b){ b.textContent = m.buyNow; });
+            var langDisp = document.getElementById('lang-display');
+            if (langDisp) langDisp.textContent = LANG_NAMES[code] || 'English';
+        }
+
+        /* ── DOM refs ───────────────────────────── */
+        var panel       = document.getElementById('user-panel');
+        var backdrop    = document.getElementById('user-backdrop');
+        var closeBtn    = document.getElementById('user-close');
+        var navUserBtn  = document.getElementById('nav-user-btn');
+        var navUserIcon = document.getElementById('nav-user-icon');
+        var navInitial  = document.getElementById('nav-user-initial');
+        var avatarDisp  = document.getElementById('user-avatar-display');
+        var nameDisp    = document.getElementById('user-name-display');
+        var emailDisp   = document.getElementById('user-email-display');
+        var editBtn     = document.getElementById('user-edit-btn');
+        var nameEdit    = document.getElementById('user-name-edit');
+        var nameInput   = document.getElementById('user-name-input');
+        var saveBtn     = document.getElementById('user-save-btn');
+        var themeRow    = document.getElementById('theme-row');
+        var themeToggle = document.getElementById('theme-toggle');
+        var themeIcon   = document.getElementById('theme-icon');
+        var themeLabel  = document.getElementById('theme-label');
+        var lastVisitEl = document.getElementById('last-visit');
+        var logoutBtn   = document.getElementById('user-logout-btn');
+        var statViewed  = document.getElementById('stat-viewed');
+        var statCart    = document.getElementById('stat-cart');
+        var statSpent   = document.getElementById('stat-spent');
+        var langCard    = document.getElementById('pref-lang-card');
+        var currCard    = document.getElementById('pref-curr-card');
+        var langPicker  = document.getElementById('lang-picker');
+        var currPicker  = document.getElementById('curr-picker');
+        var currDisp    = document.getElementById('curr-display');
+
+        var viewedCount = 0;
+        var isDark      = savedTheme === 'dark';
+
+        /* ── Set user display ───────────────────── */
+        function setUserDisplay(name) {
+            var initial = (name || '?').charAt(0).toUpperCase();
+            if (nameDisp)   nameDisp.textContent   = name;
+            if (avatarDisp) avatarDisp.textContent  = initial;
+            if (navInitial) { navInitial.textContent = initial; navInitial.style.display = 'flex'; }
+            if (navUserIcon) navUserIcon.style.display = 'none';
+        }
+        setUserDisplay(userData.name);
+        if (emailDisp) emailDisp.textContent = userData.email || '';
+
+        /* ── Last visit ─────────────────────────── */
+        var lastVisit = localStorage.getItem(LS_VISITED);
+        if (lastVisitEl) lastVisitEl.textContent = lastVisit ? 'Last visit: ' + lastVisit : 'First time here!';
+        localStorage.setItem(LS_VISITED, new Date().toLocaleDateString('en-US',{weekday:'short',year:'numeric',month:'short',day:'numeric'}));
+
+        /* ── Init preferences display ───────────── */
+        if (currDisp) {
+            var c = CURRENCIES[currentCurr] || CURRENCIES.USD;
+            currDisp.textContent = currentCurr + ' ' + c.sym;
+        }
+        applyLang(currentLang);
+        refreshAllPrices();
+        updateToggleUI(isDark);
+        highlightActivePickers();
+
+        function highlightActivePickers() {
+            if (langPicker) langPicker.querySelectorAll('.user-panel__picker-btn').forEach(function(b){
+                b.classList.toggle('user-panel__picker-btn--active', b.dataset.lang === currentLang);
+            });
+            if (currPicker) currPicker.querySelectorAll('.user-panel__picker-btn').forEach(function(b){
+                b.classList.toggle('user-panel__picker-btn--active', b.dataset.curr === currentCurr);
+            });
+        }
+
+        /* ── Open / Close ───────────────────────── */
+        function openPanel() {
+            updateStats();
+            var sw = window.innerWidth - document.documentElement.clientWidth;
+            document.body.style.paddingRight = sw + 'px';
+            document.body.style.overflow = 'hidden';
+            panel.classList.add('user-panel--open');
+        }
+        function closePanel() {
+            panel.classList.add('user-panel--closing');
+            setTimeout(function() {
+                panel.classList.remove('user-panel--open','user-panel--closing');
+                document.body.style.paddingRight = '';
+                document.body.style.overflow = '';
+                if (langPicker) langPicker.style.display = 'none';
+                if (currPicker) currPicker.style.display = 'none';
+            }, 340);
+        }
+
+        navUserBtn && navUserBtn.addEventListener('click', function(e){
+            e.preventDefault();
+            if (panel.classList.contains('user-panel--open')) return;
+            openPanel();
+        });
+        closeBtn  && closeBtn.addEventListener('click',  function(e){ e.stopPropagation(); closePanel(); });
+        backdrop  && backdrop.addEventListener('click',  function(e){ e.stopPropagation(); closePanel(); });
+        document.querySelectorAll('.sidebar__action-link').forEach(function(link){
+            if (link.textContent.trim().toLowerCase().includes('account'))
+                link.addEventListener('click', function(e){ e.preventDefault(); openPanel(); });
+        });
+        document.addEventListener('keydown', function(e){
+            if (e.key==='Escape' && panel.classList.contains('user-panel--open')) closePanel();
+        });
+
+        /* ── Name editing ───────────────────────── */
+        editBtn && editBtn.addEventListener('click', function(){
+            nameEdit.style.display = 'flex';
+            nameInput.value = userData.name || '';
+            setTimeout(function(){ nameInput.focus(); }, 50);
+        });
+        saveBtn && saveBtn.addEventListener('click', function(){
+            var val = nameInput.value.trim();
+            if (val) {
+                userData.name = val;
+                localStorage.setItem(LS_USER, JSON.stringify(userData));
+                /* also update in users db so login shows updated name */
+                try {
+                    var users = JSON.parse(localStorage.getItem('stuffsus_users')) || {};
+                    if (userData.email && users[userData.email]) {
+                        users[userData.email].name = val;
+                        localStorage.setItem('stuffsus_users', JSON.stringify(users));
+                    }
+                } catch(e) {}
+                setUserDisplay(val);
+            }
+            nameEdit.style.display = 'none';
+        });
+        nameInput && nameInput.addEventListener('keydown', function(e){
+            if (e.key==='Enter') saveBtn.click();
+            if (e.key==='Escape') nameEdit.style.display = 'none';
+        });
+
+        /* ── Dark mode ──────────────────────────── */
+        var sunSVG  = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+        var moonSVG = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+        function updateToggleUI(dark) {
+            if (!themeToggle) return;
+            themeToggle.classList.toggle('user-panel__toggle--on', dark);
+            if (themeLabel) themeLabel.textContent = dark ? 'Light Mode' : 'Dark Mode';
+            if (themeIcon)  themeIcon.innerHTML    = dark ? sunSVG : moonSVG;
+        }
+        themeRow && themeRow.addEventListener('click', function(){
+            isDark = !isDark;
+            if (isDark) document.documentElement.setAttribute('data-theme','dark');
+            else        document.documentElement.removeAttribute('data-theme');
+            updateToggleUI(isDark);
+            localStorage.setItem(LS_THEME, isDark ? 'dark' : 'light');
+        });
+
+        /* ── Preference pickers ─────────────────── */
+        function togglePicker(picker, other) {
+            var isOpen = picker.style.display !== 'none';
+            if (other) other.style.display = 'none';
+            picker.style.display = isOpen ? 'none' : 'block';
+        }
+        langCard && langCard.addEventListener('click', function(){ togglePicker(langPicker, currPicker); });
+        currCard && currCard.addEventListener('click', function(){ togglePicker(currPicker, langPicker); });
+
+        if (langPicker) langPicker.querySelectorAll('.user-panel__picker-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                currentLang = btn.dataset.lang;
+                localStorage.setItem(LS_LANG, currentLang);
+                applyLang(currentLang);
+                highlightActivePickers();
+                setTimeout(function(){ langPicker.style.display = 'none'; }, 180);
+            });
+        });
+
+        if (currPicker) currPicker.querySelectorAll('.user-panel__picker-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                currentCurr = btn.dataset.curr;
+                localStorage.setItem(LS_CURR, currentCurr);
+                var c = CURRENCIES[currentCurr] || CURRENCIES.USD;
+                if (currDisp) currDisp.textContent = currentCurr + ' ' + c.sym;
+                refreshAllPrices();
+                /* also rerender cart with new currency */
+                var renderCartEvent = new CustomEvent('stuffsus:currency-changed');
+                document.dispatchEvent(renderCartEvent);
+                highlightActivePickers();
+                setTimeout(function(){ currPicker.style.display = 'none'; }, 180);
+            });
+        });
+
+        /* ── Stats ──────────────────────────────── */
+        function updateStats() {
+            if (statViewed) statViewed.textContent = viewedCount;
+            var badge = document.getElementById('cart-badge');
+            var total = document.getElementById('cart-total');
+            if (statCart  && badge) statCart.textContent  = badge.textContent;
+            if (statSpent && total) statSpent.textContent = total.textContent;
+        }
+        document.addEventListener('click', function(e){
+            var card = e.target.closest('.shop__card');
+            if (card && !e.target.closest('.card__actions')) viewedCount++;
+        });
+
+        /* ── Logout ─────────────────────────────── */
+        logoutBtn && logoutBtn.addEventListener('click', function(){
+            localStorage.removeItem(LS_USER);
+            window.location.replace('login.html');
         });
 
     })();
